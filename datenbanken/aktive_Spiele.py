@@ -1,0 +1,1 @@
+aktive_spiele = {}
