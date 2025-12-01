@@ -5,20 +5,48 @@ from discord.ext import commands
 def help_erstellen(user, arg=None):
     if arg is None:
         embed = discord.Embed(
-            title="ℹ️ Help",
-            description=(
-                "Welcome to the Info section! Here you can find useful information about the bot's features and commands.\n\n"
-                "**Available Commands:**\n\n"
-                "`!info` - Displays this information message.\n"
-                "`!Info <command>` - Provides detailed information about a specific command.\n"
-                "`!daily` - Claim your daily reward.\n"
-                "`!scratchcard` - Buy a scratch card for a chance to win coins (costs 5000 coins).\n"
-                "`!blackjack` - Start a game of blackjack.\n"
-                "`!impostor` - Start an impostor game in your server. tag user to invite them\n"
-                "`!cd` - Check your command cooldowns.\n"
-            ),
+            title="ℹ️ Bot Help",
+            description="Welcome to the Info section! Here you can find useful information about the bot's features and commands.",
             color=discord.Color.blue(),
         )
+        embed.add_field(
+            name="💰 Economy Commands",
+            value=(
+                "`!daily` - Claim your daily reward.\n"
+                "`!scratchcard` - Buy a scratch card for a chance to win coins (costs 5000 coins).\n"
+                "`!balance` - Check your current coin balance.\n"
+                "`!cd` - Check your command cooldowns.\n"
+            ),
+            inline=False,
+        )
+
+        embed.add_field(
+            name="🎮 Game Commands",
+            value=(
+                "`!blackjack` - Start a game of blackjack.\n"
+                "`!impostor` - Start an impostor game in your server. Tag a user to invite them.\n"
+            ),
+            inline=False,
+        )
+        embed.add_field(
+            name="ℹ️ Info Commands",
+            value=(
+                "`!info` - Displays this information message.\n"
+                "`!Info <command>` - Provides detailed information about a specific command.\n"
+            ),
+            inline=False,
+        )
+        embed.add_field(
+            name="🔧 Voice Channel Commands",
+            value=(
+                "`rename` - Rename your temporary voice channel.\n"
+                "`userlimit` - Set the user limit for your temporary voice channel.\n"
+                "`kick` - Kick a member from your temporary voice channel.\n"
+                "`promote` - Promote a member to owner of your temporary voice channel.\n"
+            ),
+            inline=False,
+        )
+        embed.set_footer(text="Use commands wisely! ⚡")
         return embed
     elif arg.lower() == "daily":
         embed = discord.Embed(

@@ -5,7 +5,10 @@ import uuid
 from datenbanken.datenbanken_test import gib_guthaben, ändere_guthaben
 from datenbanken.aktive_Spiele import aktive_spiele
 from views.blackjack_view import BlackjackView
+from funktionen.inv_interface import remove_item
 from embeds.blackjack_embed import erstelle_start_embed
+from funktionen.utils import Zahlen_verkleineren
+from funktionen.inv_interface import get_inventory
 
 
 class Blackjack(commands.Cog):
@@ -13,16 +16,22 @@ class Blackjack(commands.Cog):
         self.bot = bot
 
     @commands.command(name="blackjack", aliases=["Blackjack", "gamble", "Gamble"])
-    async def blackjack(self, ctx, einsatz: int = 100):
+    async def blackjack(self, ctx, einsatz="100"):
         user_id = ctx.author.id
+        if einsatz == "all":
+            einsatz = gib_guthaben(user_id)
+        else:
+            einsatz = int(einsatz)
         if einsatz <= 0:
             await ctx.send("❌ The bet must be greater than 0.")
+            return
+        if user_id in [spiel["user_id"] for spiel in aktive_spiele.values()]:
+            await ctx.send("❌ You already have an active game.", empheral=True)
             return
         if gib_guthaben(user_id) < einsatz:
             await ctx.send("❌ You don't have enough coins.")
             return
-
-        ändere_guthaben(user_id, -einsatz)
+        remove_item(user_id, "MandoCoins", einsatz)
 
         async with aiohttp.ClientSession() as session:
             async with session.get(
@@ -52,10 +61,11 @@ class Blackjack(commands.Cog):
         )
         await ctx.send(embed=embed, file=file, view=view)
 
-    @commands.command()
+    @commands.command(name="balance", aliases=["bal", "Bal", "Balance", "b", "B"])
     async def balance(self, ctx):
-        stand = gib_guthaben(ctx.author.id)
-        await ctx.send(f"💰 Your Balance: **{stand} MandoCoins**")
+        stand = get_inventory(ctx.author.id, "MandoCoins")
+        Konto = Zahlen_verkleineren(stand)
+        await ctx.send(f"💰 Your Balance: **{Konto} MandoCoins**")
 
 
 async def setup(bot):

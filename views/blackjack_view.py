@@ -1,9 +1,11 @@
 import discord
 from io import BytesIO
 import aiohttp
-from datenbanken.datenbanken_test import gib_guthaben, ändere_guthaben
+from datenbanken.datenbanken_test import ändere_guthaben
+from funktionen.inv_interface import get_inventory, add_item, remove_item
 from datenbanken.aktive_Spiele import aktive_spiele
 from funktionen.utils import kombiniere_kartenbilder
+from funktionen.utils import Zahlen_verkleineren
 
 
 class BlackjackView(discord.ui.View):
@@ -70,7 +72,9 @@ class BlackjackView(discord.ui.View):
         file = discord.File(byte, filename="hand.png")
         embed = discord.Embed(title=titel, description=text, color=farbe)
         embed.set_image(url="attachment://hand.png")
-        embed.set_footer(text=f"Balance: {gib_guthaben(self.user_id)} Coins")
+        Guthaben = get_inventory(self.user_id, "MandoCoins")
+        Konto = Zahlen_verkleineren(Guthaben)
+        embed.set_footer(text=f"Balance: {Konto} Coins")
         await interaction.edit_original_response(
             embed=embed, attachments=[file], view=self
         )
@@ -84,16 +88,12 @@ class BlackjackView(discord.ui.View):
         if not await self.button_lock_check(interaction):
             return
 
-        # Button sofort deaktivieren
         button.disabled = True
         await interaction.response.edit_message(view=self)
-
-        # Karte ziehen
         karte = await self.ziehe_karte()
         self.player_cards.append(karte)
 
         if self.punkte(self.player_cards) > 21:
-            # Spieler über 21 → Spiel vorbei
             self.clear_items()
             await self.sende_embed(
                 interaction,
@@ -103,7 +103,6 @@ class BlackjackView(discord.ui.View):
                 discord.Color.red(),
             )
         else:
-            # Spieler kann weiterspielen → Button wieder aktivieren
             button.disabled = False
             await self.sende_embed(
                 interaction,
@@ -124,12 +123,9 @@ class BlackjackView(discord.ui.View):
 
         if not await self.button_lock_check(interaction):
             return
-
-        # Stand gedrückt → Button deaktivieren
         button.disabled = True
         await interaction.response.edit_message(view=self)
 
-        # Dealer zieht Karten
         self.clear_items()
         while self.punkte(self.dealer_cards) < 17:
             karte = await self.ziehe_karte()
@@ -137,11 +133,12 @@ class BlackjackView(discord.ui.View):
 
         sp, dp = self.punkte(self.player_cards), self.punkte(self.dealer_cards)
         if dp > 21 or sp > dp:
-            ändere_guthaben(self.user_id, self.einsatz * 2)
+            Einsatz = self.einsatz * 2
+            add_item(self.user_id, "MandoCoins", Einsatz)
             titel, farbe = "✅ You win!", discord.Color.green()
             text = f"You: {sp} | Dealer: {dp}"
         elif sp == dp:
-            ändere_guthaben(self.user_id, self.einsatz)
+            add_item(self.user_id, "MandoCoins", self.einsatz)
             titel, farbe = "➖ Tie", discord.Color.greyple()
             text = f"Both: {sp} Points"
         else:
@@ -155,5 +152,4 @@ class BlackjackView(discord.ui.View):
             self.dealer_cards,
             farbe,
         )
-        # Stand-Button bleibt deaktiviert, Spiel vorbei
         await self.button_unlock()

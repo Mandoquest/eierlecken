@@ -85,11 +85,18 @@ async def choose_Embeds(name, **kwargs):
     elif name == "Job_liste":
         from embeds.Jobs.Job_liste import jobs_embed
 
-        print("embed importet")
         return await call_embed(jobs_embed, **kwargs)
     elif name == "aktueller_Job":
         from embeds.Jobs.aktueller_Job import aktueller_Job
 
         return await call_embed(aktueller_Job, **kwargs)
+    elif name == "Sprachkanal":
+        from embeds.Sprachkanal import Sprachkanal
+
+        return await call_embed(Sprachkanal, **kwargs)
+    elif name == "Test":
+        from embeds.Test import embed
+
+        return embed
     else:
         raise ValueError(f"Embed '{name}' ist nicht definiert.")

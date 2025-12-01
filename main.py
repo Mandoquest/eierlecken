@@ -3,7 +3,8 @@ import os
 from discord.ext import commands
 import asyncio
 from dotenv import load_dotenv
-
+from funktionen.choose_Embeds import choose_Embeds
+from funktionen.choose_Views import choose_Views
 
 client = commands.Bot(
     command_prefix="!", intents=discord.Intents.all(), help_command=None
@@ -35,6 +36,17 @@ async def ping(ctx):
         description="`whoever reads this is stupid` <a:typing:1410736488915669124>",
     )
     await ctx.send(embed=embed)
+
+
+@client.command()
+async def Test(ctx):
+    print("Test command activated")
+    embed = await choose_Embeds("Test")
+    print("Embed chosen")
+    view = choose_Views("Test")
+    print("Embed and View chosen")
+    await ctx.send(embed=embed, view=view)
+    print("Message sent")
 
 
 @client.command()

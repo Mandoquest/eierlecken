@@ -1,8 +1,5 @@
-print("\033[32mDies ist rot\033[0m")
-import discord
+from funktionen.inv_interface import add_item, remove_item, get_inventory
 
 
-class MyView(discord.ui.View):
-    @discord.ui.button(label="A button", style=discord.ButtonStyle.primary)
-    async def button_callback(self, button, interaction):
-        button.disabled = True
+inventory = get_inventory("hanno", "sword")
+print(inventory)

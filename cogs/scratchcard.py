@@ -4,6 +4,7 @@ from discord.ext import commands
 from funktionen.choose_Embeds import choose_Embeds
 from datenbanken.datenbanken_test import ändere_guthaben, gib_guthaben
 from datenbanken.cooldowns import check_cooldown, update_cooldown
+from funktionen.inv_interface import add_item, get_inventory, remove_item
 
 
 class Scratchcard(commands.Cog):
@@ -17,7 +18,7 @@ class Scratchcard(commands.Cog):
     @commands.command()
     async def scratchcard(self, ctx):
         print("Command received")
-        guthaben = gib_guthaben(ctx.author.id)
+        guthaben = get_inventory(ctx.author.id, "MandoCoins")
         print("Guthaben:", guthaben)
         if guthaben < 5000:
             await ctx.send("You need at least 5000 coins to buy a scratch card.")
@@ -33,12 +34,11 @@ class Scratchcard(commands.Cog):
             return
 
         update_cooldown(str(ctx.author.id), "rubbellos")
-        ändere_guthaben(str(ctx.author.id), -5000)
-        print("Sending scratchcard embed")
+        remove_item(ctx.author.id, "MandoCoins", 5000)
 
         embed = await choose_Embeds("scratchcard_erstellen", user=ctx.author.id)
 
-        await ctx.send(embed=embed)
+        await ctx.send("test")
 
 
 async def setup(bot):

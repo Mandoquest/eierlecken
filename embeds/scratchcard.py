@@ -1,6 +1,7 @@
 import discord
 import random
 from datenbanken.datenbanken_test import ändere_guthaben
+from funktionen.inv_interface import add_item
 
 
 def scratchcard_erstellen(user: int):
@@ -48,8 +49,7 @@ def scratchcard_erstellen(user: int):
     reihen = [grid[i : i + 3] for i in range(0, 9, 3)]
     matrix = "\n".join(" ".join(r) for r in reihen)
     if gewinn > 0:
-        ändere_guthaben(user, gewinn)
-        print(f"User {user} won {gewinn} coins")
+        add_item(user.id, gewinn)
     embed = discord.Embed(
         title="🎟️ scratchcard",
         description="good luck! \n\n" + matrix,

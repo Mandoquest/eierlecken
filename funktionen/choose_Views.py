@@ -38,5 +38,13 @@ def choose_Views(name, **kwargs):
         from datenbanken.job_list import jobs
 
         return WorkView(jobs)
+    elif name == "Sprachkanal":
+        from views.Sprachkanal import Sprachkanal_Buttons
+
+        return Sprachkanal_Buttons(**kwargs)
+    elif name == "Test":
+        from views.Test import Test
+
+        return Test()
     else:
         raise ValueError(f"View '{name}' nicht gefunden.")

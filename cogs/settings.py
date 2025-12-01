@@ -11,7 +11,6 @@ class Settings(commands.Cog):
         self.client = client
 
     @commands.command()
-    @commands.has_permissions(administrator=True)
     async def settings(self, ctx):
         if ctx.author.guild_permissions.administrator:
             embed = await choose_Embeds("Main", guild=ctx.guild)
