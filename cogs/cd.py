@@ -7,8 +7,8 @@ from datenbanken.cooldowns import (
     update_cooldown,
     save_cooldowns,
 )
-from embeds.cd import erstelle_cd_embed
 from datenbanken.datenbanken_test import ändere_guthaben, gib_guthaben
+from funktionen.inv_interface import get_inventory, add_item
 from funktionen.sekunden_in_stunden import sekunden_in_stunden
 import random
 
@@ -48,8 +48,8 @@ class Cd(commands.Cog):
         else:
             update_cooldown(user_id, "daily")
             coins = random.randint(500, 1500)
-            ändere_guthaben(user_id, coins)
-            neues_guthaben = gib_guthaben(user_id)
+            add_item(user_id, "MandoCoins", coins)
+            neues_guthaben = get_inventory(user_id, "MandoCoins")
             await ctx.send(
                 f"🎉 You got {coins}coins. You have {neues_guthaben} coins now"
             )

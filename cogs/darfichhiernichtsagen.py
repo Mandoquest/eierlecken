@@ -12,7 +12,3 @@ class DarfIchHierNichtsSagen(commands.Cog):
         player_id = ctx.author.id
         inventory = get_inventory(player_id)
         await ctx.send(f"Inventory for player {player_id}: {inventory}")
-
-
-async def setup(bot):
-    await bot.add_cog(DarfIchHierNichtsSagen(bot))

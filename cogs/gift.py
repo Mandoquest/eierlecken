@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from datenbanken.datenbanken_test import gib_guthaben, ändere_guthaben
+from funktionen.inv_interface import remove_item, add_item, get_inventory
 
 
 class gift(commands.Cog):
@@ -17,16 +17,17 @@ class gift(commands.Cog):
         if sender == receiver:
             await ctx.send("You cannot gift to yourself.")
             return
-        balance = gib_guthaben(sender.id)
+        balance = get_inventory(sender.id, "MandoCoins")
         if balance < amount:
             await ctx.send(f"Insufficient funds. Your current balance: {balance}")
             return
-        ändere_guthaben(sender.id, -amount)
-        ändere_guthaben(receiver.id, amount)
+        remove_item(sender.id, "MandoCoins", amount)
+        add_item(receiver.id, "MandoCoins", amount)
 
+        balance_receiver = get_inventory(receiver.id, "MandoCoins")
         await ctx.send(
             f"{sender.mention} has successfully gifted {amount} to {receiver.mention}.\n"
-            f"Your new balance: {gib_guthaben(sender.id)}"
+            f"His/Her new balance: {balance_receiver}"
         )
 
 

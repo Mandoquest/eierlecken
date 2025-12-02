@@ -102,6 +102,8 @@ class BlackjackView(discord.ui.View):
                 self.player_cards,
                 discord.Color.red(),
             )
+            if self.spiel_id in aktive_spiele:
+                del aktive_spiele[self.spiel_id]
         else:
             button.disabled = False
             await self.sende_embed(
@@ -152,4 +154,6 @@ class BlackjackView(discord.ui.View):
             self.dealer_cards,
             farbe,
         )
+        if self.spiel_id in aktive_spiele:
+            del aktive_spiele[self.spiel_id]
         await self.button_unlock()

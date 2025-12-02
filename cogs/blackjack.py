@@ -26,24 +26,29 @@ class Blackjack(commands.Cog):
             await ctx.send("❌ The bet must be greater than 0.")
             return
         if user_id in [spiel["user_id"] for spiel in aktive_spiele.values()]:
-            await ctx.send("❌ You already have an active game.", empheral=True)
+            await ctx.send("❌ You already have an active game.", ephemeral=True)
             return
         if gib_guthaben(user_id) < einsatz:
             await ctx.send("❌ You don't have enough coins.")
             return
-        remove_item(user_id, "MandoCoins", einsatz)
 
-        async with aiohttp.ClientSession() as session:
-            async with session.get(
-                "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
-            ) as resp:
-                deck_id = (await resp.json())["deck_id"]
-            async with session.get(
-                f"https://deckofcardsapi.com/api/deck/{deck_id}/draw/?count=3"
-            ) as resp:
-                cards = (await resp.json())["cards"]
-                player_cards = [cards[0]]
-                dealer_cards = [cards[1]]
+        try:
+            async with aiohttp.ClientSession() as session:
+                async with session.get(
+                    "https://deckofcardsapi.com/api/deck/new/shuffle/?deck_count=1"
+                ) as resp:
+                    deck_id = (await resp.json())["deck_id"]
+                async with session.get(
+                    f"https://deckofcardsapi.com/api/deck/{deck_id}/draw/?count=3"
+                ) as resp:
+                    cards = (await resp.json())["cards"]
+                    player_cards = [cards[0]]
+                    dealer_cards = [cards[1]]
+        except Exception as e:
+            await ctx.send(f"❌ Error starting game: {str(e)}")
+            return
+
+        remove_item(user_id, "MandoCoins", einsatz)
 
         spiel_id = str(uuid.uuid4())[:8]
         view = BlackjackView(
