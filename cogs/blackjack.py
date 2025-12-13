@@ -2,13 +2,11 @@ import discord
 from discord.ext import commands
 import aiohttp
 import uuid
-from datenbanken.datenbanken_test import gib_guthaben, ändere_guthaben
 from datenbanken.aktive_Spiele import aktive_spiele
 from views.blackjack_view import BlackjackView
-from funktionen.inv_interface import remove_item
 from embeds.blackjack_embed import erstelle_start_embed
 from funktionen.utils import Zahlen_verkleineren
-from funktionen.inv_interface import get_inventory
+from funktionen.inv_interface import get_inventory, remove_item
 
 
 class Blackjack(commands.Cog):
@@ -19,7 +17,7 @@ class Blackjack(commands.Cog):
     async def blackjack(self, ctx, einsatz="100"):
         user_id = ctx.author.id
         if einsatz == "all":
-            einsatz = gib_guthaben(user_id)
+            einsatz = get_inventory(user_id, "MandoCoins")
         else:
             einsatz = int(einsatz)
         if einsatz <= 0:
@@ -28,7 +26,7 @@ class Blackjack(commands.Cog):
         if user_id in [spiel["user_id"] for spiel in aktive_spiele.values()]:
             await ctx.send("❌ You already have an active game.", ephemeral=True)
             return
-        if gib_guthaben(user_id) < einsatz:
+        if get_inventory(user_id, "MandoCoins") < einsatz:
             await ctx.send("❌ You don't have enough coins.")
             return
 

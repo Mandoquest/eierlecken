@@ -1,6 +1,6 @@
 import discord
 from discord.ext import commands
-from datenbanken.inv import get_inventory
+from funktionen.inv_interface import get_inventory
 
 
 class DarfIchHierNichtsSagen(commands.Cog):

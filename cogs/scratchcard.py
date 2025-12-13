@@ -2,9 +2,8 @@ import discord
 from discord.ext import commands
 
 from funktionen.choose_Embeds import choose_Embeds
-from datenbanken.datenbanken_test import ändere_guthaben, gib_guthaben
 from datenbanken.cooldowns import check_cooldown, update_cooldown
-from funktionen.inv_interface import add_item, get_inventory, remove_item
+from funktionen.inv_interface import get_inventory, remove_item
 
 
 class Scratchcard(commands.Cog):
@@ -38,7 +37,7 @@ class Scratchcard(commands.Cog):
 
         embed = await choose_Embeds("scratchcard_erstellen", user=ctx.author.id)
 
-        await ctx.send("test")
+        await ctx.send(embed=embed)
 
 
 async def setup(bot):

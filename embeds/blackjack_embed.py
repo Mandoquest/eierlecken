@@ -1,13 +1,14 @@
 import discord
 from io import BytesIO
-from datenbanken.datenbanken_test import gib_guthaben
+from funktionen.inv_interface import get_inventory
 from funktionen.utils import kombiniere_kartenbilder
+
 
 def berechne_punkte(karten):
     punkte, asse = 0, 0
     for karte in karten:
         v = karte["value"]
-        if v in ['KING', 'QUEEN', 'JACK']:
+        if v in ["KING", "QUEEN", "JACK"]:
             punkte += 10
         elif v == "ACE":
             punkte += 11
@@ -18,6 +19,7 @@ def berechne_punkte(karten):
         punkte -= 10
         asse -= 1
     return punkte
+
 
 async def erstelle_start_embed(user, spiel_id, einsatz, karten):
     kartenbilder = [k["image"] for k in karten]
@@ -30,9 +32,10 @@ async def erstelle_start_embed(user, spiel_id, einsatz, karten):
     embed = discord.Embed(
         title="♠️ Blackjack started",
         description=f"Points: {berechne_punkte(karten)}",
-        color=discord.Color.green()
+        color=discord.Color.green(),
     )
     embed.set_image(url="attachment://hand.png")
-    embed.set_footer(text=f"Bet: {einsatz} | Balance: {gib_guthaben(user.id)} Coins")
+    balance = get_inventory(user.id, "MandoCoins")
+    embed.set_footer(text=f"Bet: {einsatz} | Balance: {balance} Coins")
 
     return embed, file

@@ -28,7 +28,7 @@ class Sprachkanal(commands.Cog):
     async def sprachkanal(self, ctx):
         if ctx.author.guild_permissions.administrator:
             embed = await choose_Embeds("Sprachkanal", Guild=ctx.guild)
-            view = choose_Views("Sprachkanal", Guild=ctx.guild)
+            view = await choose_Views("Sprachkanal", Guild=ctx.guild)
             await ctx.send(embed=embed, view=view)
         else:
             message = await ctx.send(
@@ -45,8 +45,9 @@ class Sprachkanal(commands.Cog):
 
         if before.channel is None and after.channel is not None:
             if after.channel.id == channel_id:
+                category = after.channel.category
                 created_channel = await guild.create_voice_channel(
-                    name=f"{member.name}'s Room"
+                    name=f"{member.name}'s Room", category=category
                 )
                 self.temp_channels[str(created_channel.id)] = member.id
                 self.save_channels()

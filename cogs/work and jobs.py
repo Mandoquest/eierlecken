@@ -26,7 +26,7 @@ class Work(commands.Cog):
             Job = get_job(user.id)
             if Job is None:
                 embed = await choose_Embeds("Job_liste", user=user)
-                view = choose_Views("Job_liste")
+                view = await choose_Views("Job_liste")
                 print("Embed created:", embed)
                 await ctx.send(embed=embed, view=view)
 

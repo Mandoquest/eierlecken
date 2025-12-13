@@ -100,6 +100,18 @@ def help_erstellen(user, arg=None):
             ),
             color=discord.Color.gold(),
         )
+    elif arg.lower() == "impostor":
+        embed = discord.Embed(
+            title="🕵️‍♂️ Impostor Command",
+            description=(
+                "The `!impostor` command allows you to start an impostor game in your server. You can invite other users to join the game.\n\n"
+                "**How to Use:**\n"
+                "`!impostor @user` - Start an impostor game and invite the tagged user.\n\n"
+                "**You need at least 3 player**\n"
+                "When enough players have joined, the game will begin and you'll receive a DM with your role."
+            ),
+            color=discord.Color.purple(),
+        )
 
     embed.set_footer(text="Use your balance wisely – fortune favors the bold."),
     return embed

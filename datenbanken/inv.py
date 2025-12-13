@@ -12,7 +12,6 @@ class InventoryManager:
         return os.path.join(PLAYER_FOLDER, f"{player_id}.json")
 
     def create_player(self, player_id):
-
         filepath = self.get_player_file(player_id)
 
         if not os.path.exists(filepath):
@@ -24,27 +23,45 @@ class InventoryManager:
         return False
 
     def load_player(self, player_id):
-
         filepath = self.get_player_file(player_id)
 
         if not os.path.exists(filepath):
             return None
 
         with open(filepath, "r", encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
+        changed = False
+        for item, val in list(data.get("items", {}).items()):
+            if isinstance(val, int):
+                data["items"][item] = {"amount": val}
+                changed = True
+
+        if changed:
+            self.save_player(player_id, data)
+
+        return data
 
     def save_player(self, player_id, data):
         filepath = self.get_player_file(player_id)
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(data, f, indent=4)
 
-    def add_item(self, player_id, item, amount):
+    def add_item(self, player_id, item, amount, tag=None):
         data = self.load_player(player_id)
         if data is None:
             self.create_player(player_id)
-        data = self.load_player(player_id)
+            data = self.load_player(player_id)
 
-        data["items"][item] = data["items"].get(item, 0) + amount
+        if item not in data["items"]:
+            data["items"][item] = {"amount": amount}
+            if tag is not None:
+                data["items"][item]["tag"] = tag
+        else:
+            data["items"][item]["amount"] += amount
+
+            if tag is not None:
+                data["items"][item]["tag"] = tag
+
         self.save_player(player_id, data)
         return f"Added {amount} of {item} to player {player_id}"
 
@@ -56,24 +73,31 @@ class InventoryManager:
         if item not in data["items"]:
             raise ValueError(f"Item {item} not found in inventory")
 
-        if data["items"][item] < amount:
+        if data["items"][item]["amount"] < amount:
             raise ValueError(f"Not enough {item} to remove")
 
-        data["items"][item] -= amount
-        if data["items"][item] == 0:
+        data["items"][item]["amount"] -= amount
+
+        if data["items"][item]["amount"] == 0:
             del data["items"][item]
 
         self.save_player(player_id, data)
         return f"Removed {amount} of {item} from player {player_id}"
 
-    def get_inventory(self, player_id, item=None):
+    def get_inventory(self, player_id, item=None, tag=None):
         data = self.load_player(player_id)
-        if not data:
+        if data is None:
             self.create_player(player_id)
-            data = self.load_player(player_id)
-            return data["items"].get(item, 0)
+            return {}
 
-        if item is None:
-            return data["items"]
-        else:
-            return data["items"].get(item, 0)
+        items = data["items"]
+
+        if item is not None:
+            return items.get(item, {"amount": 0})
+
+        if tag is not None:
+            return {
+                name: info for name, info in items.items() if info.get("tag") == tag
+            }
+
+        return items

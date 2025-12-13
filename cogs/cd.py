@@ -7,10 +7,10 @@ from datenbanken.cooldowns import (
     update_cooldown,
     save_cooldowns,
 )
-from datenbanken.datenbanken_test import ändere_guthaben, gib_guthaben
 from funktionen.inv_interface import get_inventory, add_item
 from funktionen.sekunden_in_stunden import sekunden_in_stunden
 import random
+from funktionen.utils import Zahlen_verkleineren
 
 
 class Cd(commands.Cog):
@@ -49,7 +49,8 @@ class Cd(commands.Cog):
             update_cooldown(user_id, "daily")
             coins = random.randint(500, 1500)
             add_item(user_id, "MandoCoins", coins)
-            neues_guthaben = get_inventory(user_id, "MandoCoins")
+            neues_guthaben = Zahlen_verkleineren(get_inventory(user_id, "MandoCoins"))
+
             await ctx.send(
                 f"🎉 You got {coins}coins. You have {neues_guthaben} coins now"
             )

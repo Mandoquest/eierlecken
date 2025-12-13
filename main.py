@@ -23,19 +23,37 @@ async def load():
             except Exception as e:
                 print(f"Fehler beim Laden von {filename}: {e}")
 
+
+@client.event
+async def on_ready():
+    await client.change_presence(activity=discord.Game(name="mit deinen Daten"))
+    print("\033[32mBot ist Fertig\033[0m")
+
+    CHANNEL_ID = 1265535516863107079
+    try:
+        channel = await client.fetch_channel(CHANNEL_ID)
+    except Exception as e:
+        print("Fehler beim Fetchen des Channels:", e)
+        return
+
+    embed = await choose_Embeds("stockmarket")
+    view = await choose_Views("stockmarket")
+    await channel.send(embed=embed, view=view)
+
     @client.event
-    async def on_ready():
-        await client.change_presence(activity=discord.Game(name="mit deinen Daten"))
-        print("\033[32mBot ist Fertig\033[0m")
+    async def on_command_error(ctx, error):
+        try:
+            cmd_name = ctx.command.name if ctx.command else None
+            print(f"Command error in {cmd_name}: {error}")
+        except Exception as e:
+            print("Fehler in on_command_error handler:", e)
 
 
 @client.command()
 async def ping(ctx):
-    embed = discord.Embed(
-        title="Pong!",
-        description="`whoever reads this is stupid` <a:typing:1410736488915669124>",
-    )
-    await ctx.send(embed=embed)
+    print(ctx.author.id)
+    view = await choose_Views("view_stockmarket")
+    await ctx.send(view=view)
 
 
 @client.command()
@@ -43,7 +61,7 @@ async def Test(ctx):
     print("Test command activated")
     embed = await choose_Embeds("Test")
     print("Embed chosen")
-    view = choose_Views("Test")
+    view = await choose_Views("Test")
     print("Embed and View chosen")
     await ctx.send(embed=embed, view=view)
     print("Message sent")

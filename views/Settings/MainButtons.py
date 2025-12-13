@@ -11,25 +11,22 @@ class MainButtons(AuthorView):
         super().__init__(author_id=author_id, timeout=None)
         self.author_id = author_id
 
-    
-
     @discord.ui.button(
         label="Welcome Channel", style=discord.ButtonStyle.primary, emoji="1️⃣"
     )
     async def first_button_callback(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed= await choose_Embeds("Welcome_channel", guild=interaction.guild)
-        view= choose_Views("Welcome_channel", author_id=self.author_id)
+        embed = await choose_Embeds("Welcome_channel", guild=interaction.guild)
+        view = await choose_Views("Welcome_channel", author_id=self.author_id)
         await interaction.response.edit_message(view=view, embed=embed)
-
 
     @discord.ui.button(label="Antispam", style=discord.ButtonStyle.primary, emoji="2️⃣")
     async def second_button_callback(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
         embed = await choose_Embeds("Antispam", guild=interaction.guild)
-        view = choose_Views("Antispam", author_id=self.author_id)
+        view = await choose_Views("Antispam", author_id=self.author_id)
         print(f"Button Antispam pressed by {interaction.user.name}")
         await interaction.response.edit_message(view=view, embed=embed)
 
@@ -40,7 +37,9 @@ class MainButtons(AuthorView):
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
         if interaction.user.id != self.author_id:
-            await interaction.response.send_message("Its not your Button!", ephemeral=True)
+            await interaction.response.send_message(
+                "Its not your Button!", ephemeral=True
+            )
             return
         await interaction.response.send_message(
             "Du hast den Button gedrückt!", ephemeral=True
@@ -53,9 +52,11 @@ class MainButtons(AuthorView):
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
         if interaction.user.id != self.author_id:
-            await interaction.response.send_message("Its not your Button!", ephemeral=True)
+            await interaction.response.send_message(
+                "Its not your Button!", ephemeral=True
+            )
             return
-        
+
         await interaction.response.send_message(
             "Du hast den Button gedrückt!", ephemeral=True
         )

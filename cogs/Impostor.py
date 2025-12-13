@@ -24,7 +24,7 @@ class Impostor(commands.Cog):
                 author_id=ctx.author.id,
                 players=player_mentions,
             )
-            view = choose_Views(
+            view = await choose_Views(
                 "Impostor",
                 author_id=ctx.author.id,
                 author_name=ctx.author.display_name,

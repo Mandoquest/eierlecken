@@ -1,11 +1,11 @@
 import discord
 from io import BytesIO
 import aiohttp
-from datenbanken.datenbanken_test import ändere_guthaben
-from funktionen.inv_interface import get_inventory, add_item, remove_item
+from funktionen.inv_interface import get_inventory, add_item
 from datenbanken.aktive_Spiele import aktive_spiele
 from funktionen.utils import kombiniere_kartenbilder
 from funktionen.utils import Zahlen_verkleineren
+import asyncio
 
 
 class BlackjackView(discord.ui.View):
@@ -65,16 +65,21 @@ class BlackjackView(discord.ui.View):
         return [k["image"] for k in karten]
 
     async def sende_embed(self, interaction, titel, text, karten, farbe):
-        bild = kombiniere_kartenbilder(self.kartenbilder(karten))
+        bild = await asyncio.to_thread(
+            kombiniere_kartenbilder, self.kartenbilder(karten)
+        )
         byte = BytesIO()
         bild.save(byte, format="PNG")
         byte.seek(0)
+
         file = discord.File(byte, filename="hand.png")
+
         embed = discord.Embed(title=titel, description=text, color=farbe)
         embed.set_image(url="attachment://hand.png")
         Guthaben = get_inventory(self.user_id, "MandoCoins")
         Konto = Zahlen_verkleineren(Guthaben)
         embed.set_footer(text=f"Balance: {Konto} Coins")
+
         await interaction.edit_original_response(
             embed=embed, attachments=[file], view=self
         )

@@ -16,7 +16,9 @@ class Leaderboard(commands.Cog):
             embed = await choose_Embeds(
                 "leaderboard", top=top_str, user=str(ctx.author.id), bot=self.bot
             )
-            view = choose_Views("leaderboard", top=top_str, user=str(ctx.author.id))
+            view = await choose_Views(
+                "leaderboard", top=top_str, user=str(ctx.author.id)
+            )
             await ctx.send(embed=embed, view=view)
         except Exception as e:
             await ctx.send(f"Fehler beim Laden des Leaderboards: {e}")

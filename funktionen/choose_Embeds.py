@@ -21,7 +21,6 @@ async def choose_Embeds(name, **kwargs):
         if guild is None:
             raise ValueError("Guild is required for 'Welcome_channel' embed.")
         return await call_embed(welcome_channel, guild=guild)
-        return embed
 
     elif name == "Antispam":
         from embeds.Settings.Antispam import Antispam_embed
@@ -52,11 +51,6 @@ async def choose_Embeds(name, **kwargs):
         from embeds.Impostor import Impostor_end
 
         return await call_embed(Impostor_end, **kwargs)
-
-        # elif name == "not_dc":
-        from embeds.Spotify.not_dc import not_dc
-
-        return not_dc
 
     elif name == "cd":
         from embeds.cd import erstelle_cd_embed
@@ -98,5 +92,28 @@ async def choose_Embeds(name, **kwargs):
         from embeds.Test import embed
 
         return embed
+    elif name == "stockmarket":
+        from embeds.stockmarket.Menu_embeds import embed_main
+
+        return embed_main
+
+    elif name == "stock":
+        print("choose_Embeds called for stock with kwargs:", kwargs)
+        from embeds.stockmarket.create_stock_embed import create_stock_embed
+
+        print("Imported create_stock_embed")
+        return await call_embed(create_stock_embed, **kwargs)
+    elif name == "your_portfolio":
+        from embeds.stockmarket.Menu_embeds import your_portfolio
+
+        return your_portfolio
+    elif name == "Fincancial_statistics":
+        from embeds.stockmarket.Menu_embeds import Fincancial_statistics
+
+        return Fincancial_statistics
+    elif name == "buy_stock":
+        from embeds.stockmarket.transaction_embeds import embed
+
+        return await call_embed(embed, **kwargs)
     else:
         raise ValueError(f"Embed '{name}' ist nicht definiert.")
