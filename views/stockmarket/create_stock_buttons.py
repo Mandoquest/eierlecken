@@ -4,7 +4,7 @@ from funktionen.choose_Embeds import choose_Embeds
 from funktionen.choose_Views import choose_Views
 
 
-async def create_stock_buttons(ticker_symbol: str) -> View:
+async def create_stock_buttons(ticker_symbol: str, author_id: int) -> View:
     class Stockbuttons(View):
         def __init__(self, *, timeout=None):
             super().__init__(timeout=timeout)
@@ -19,7 +19,7 @@ async def create_stock_buttons(ticker_symbol: str) -> View:
             self, interaction: discord.Interaction, button: discord.ui.Button
         ):
             embed = await choose_Embeds("stockmarket")
-            view = await choose_Views("stockmarket")
+            view = await choose_Views("Stockmarket_page1")
             await interaction.response.edit_message(embed=embed, view=view)
 
         @discord.ui.button(
@@ -31,11 +31,8 @@ async def create_stock_buttons(ticker_symbol: str) -> View:
         async def buy_callback(
             self, interaction: discord.Interaction, button: discord.ui.Button
         ):
-            embed = await choose_Embeds(
-                "buy_stock",
-                ticker_symbol=ticker_symbol,
-            )
-            view = await choose_Views("buy_stock", ticker_symbol=ticker_symbol)
+            embed = await choose_Embeds("stock", ticker_symbol=ticker_symbol)
+            view = await choose_Views("stock", ticker_symbol=ticker_symbol , author_id=author_id)
             await interaction.response.edit_message(embed=embed, view=view)
 
         @discord.ui.button(

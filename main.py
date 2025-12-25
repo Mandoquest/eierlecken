@@ -36,8 +36,8 @@ async def on_ready():
         print("Fehler beim Fetchen des Channels:", e)
         return
 
-    embed = await choose_Embeds("stockmarket")
-    view = await choose_Views("stockmarket")
+    embed = await choose_Embeds("stockmarket_main")
+    view = await choose_Views("stockmarket_main")
     await channel.send(embed=embed, view=view)
 
     @client.event
@@ -48,12 +48,31 @@ async def on_ready():
         except Exception as e:
             print("Fehler in on_command_error handler:", e)
 
+@client.command()
+async def clear_all(ctx):
+    await ctx.send("Starte das Löschen aller Nachrichten... Dies kann einige Minuten dauern.", delete_after=5)
+
+    async for message in ctx.channel.history(limit=None, oldest_first=False):
+        try:
+            await message.delete()
+            await asyncio.sleep(0.1)  
+        except discord.Forbidden:
+            await ctx.send("Ich habe nicht genügend Berechtigungen zum Löschen von Nachrichten.")
+            break
+        except discord.HTTPException:
+            continue  
+
+    await ctx.send("Alle Nachrichten wurden gelöscht.", delete_after=5)  
+
+
+
 
 @client.command()
 async def ping(ctx):
     print(ctx.author.id)
-    view = await choose_Views("view_stockmarket")
-    await ctx.send(view=view)
+    view = await choose_Views("Test")
+    embed = await choose_Embeds("Test")
+    await ctx.send(embed=embed, view=view)
 
 
 @client.command()

@@ -3,6 +3,14 @@
     "items": {
         "MandoCoins": {
             "amount": 149969712
+        },
+        "self.ticker_symbol": {
+            "amount": 2.0,
+            "category": "stock"
+        },
+        "AAPL": {
+            "amount": 2.2,
+            "category": "stock"
         }
     }
 }

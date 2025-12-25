@@ -4,7 +4,7 @@ from funktionen.choose_Embeds import choose_Embeds
 from funktionen.choose_Views import choose_Views
 
 
-class StockMarketView(View):
+class Stockmarket_Main(View):
     def __init__(self, *, timeout=None):
         super().__init__(timeout=timeout)
 
@@ -17,8 +17,8 @@ class StockMarketView(View):
     async def stockmarket_callback(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed = await choose_Embeds("stockmarket")
-        view = await choose_Views("Stockmarket_page1")
+        embed = await choose_Embeds("stockm_p1")
+        view = await choose_Views("stockm_p1")
         await interaction.response.edit_message(embed=embed, view=view)
 
     @discord.ui.button(

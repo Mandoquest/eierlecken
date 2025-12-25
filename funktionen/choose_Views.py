@@ -8,6 +8,7 @@ async def choose_Views(name, **kwargs):
         else:
             return func(**kw)
 
+
     view = None
 
     if name == "Main":
@@ -56,28 +57,21 @@ async def choose_Views(name, **kwargs):
 
         view = Test
 
-    elif name == "stockmarket":
-        from views.stockmarket.stockmarket import StockMarketView
+    elif name == "stockmarket_main":
+        from views.stockmarket.Stockmarket_Main import Stockmarket_Main
 
-        view = StockMarketView
+        view = Stockmarket_Main
 
-    elif name == "Stockmarket_page1":
-        from views.stockmarket.stockmarket_pages import Stockmarket_page1
 
-        view = Stockmarket_page1
+    elif name == ("stockm_p1"):
+        from views.stockmarket.stockmarket_pages import stockm_p1
 
-    elif name == "Stockmarket_page2":
-        from views.stockmarket.stockmarket_pages import Stockmarket_page2
+        view = stockm_p1
 
-        view = Stockmarket_page2
-    elif name == "Stockmarket_page3":
-        from views.stockmarket.stockmarket_pages import Stockmarket_page3
-
-        view = Stockmarket_page3
     elif name == "stock":
-        from views.stockmarket import create_stock_buttons
+        from views.stockmarket.buy_stock import StockBuyView
 
-        return await call_view(create_stock_buttons, **kwargs)
+        return StockBuyView(**kwargs)
 
     else:
         raise ValueError(f"View '{name}' nicht gefunden.")

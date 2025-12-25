@@ -10,8 +10,8 @@ class StockMarket(commands.Cog):
 
     @commands.command(name="stock", aliases=["Stock", "stocks", "Stocks"])
     async def stock(self, ctx):
-        embed = await choose_Embeds("stockmarket")
-        view = await choose_Views("stockmarket")
+        embed = await choose_Embeds("stockmarket_main")
+        view = await choose_Views("stockmarket_main")
         await ctx.send(embed=embed, view=view)
 
 

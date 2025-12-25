@@ -92,17 +92,21 @@ async def choose_Embeds(name, **kwargs):
         from embeds.Test import embed
 
         return embed
-    elif name == "stockmarket":
+    elif name == "stockmarket_main":
         from embeds.stockmarket.Menu_embeds import embed_main
 
         return embed_main
+    
+    elif name == "stockm_p1":
+        from embeds.stockmarket.Stockmarket_pages import stockm_p1
 
-    elif name == "stock":
-        print("choose_Embeds called for stock with kwargs:", kwargs)
+        return stockm_p1
+
+    elif name == "Create_stock_embed":
         from embeds.stockmarket.create_stock_embed import create_stock_embed
 
-        print("Imported create_stock_embed")
         return await call_embed(create_stock_embed, **kwargs)
+    
     elif name == "your_portfolio":
         from embeds.stockmarket.Menu_embeds import your_portfolio
 
