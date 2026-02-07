@@ -17,7 +17,7 @@ class MainButtons(AuthorView):
     async def first_button_callback(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed = await choose_Embeds("Welcome_channel", guild=interaction.guild)
+        embed =  await choose_Embeds("Welcome_channel", guild=interaction.guild)
         view = await choose_Views("Welcome_channel", author_id=self.author_id)
         await interaction.response.edit_message(view=view, embed=embed)
 
@@ -25,7 +25,7 @@ class MainButtons(AuthorView):
     async def second_button_callback(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed = await choose_Embeds("Antispam", guild=interaction.guild)
+        embed =  await choose_Embeds("Antispam", guild=interaction.guild)
         view = await choose_Views("Antispam", author_id=self.author_id)
         print(f"Button Antispam pressed by {interaction.user.name}")
         await interaction.response.edit_message(view=view, embed=embed)

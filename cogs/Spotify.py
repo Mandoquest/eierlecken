@@ -37,7 +37,7 @@ class Music(commands.Cog):
 
     async def ensure_voice(self, ctx):
         if ctx.author.voice is None:
-            embed = await choose_Embeds("not_dc")
+            embed =  await choose_Embeds("not_dc")
             await ctx.send(embed=embed)
             return None
         channel = ctx.author.voice.channel
@@ -78,7 +78,7 @@ class Music(commands.Cog):
                     print(f"Fehler nach Songende: {e}")
 
             ctx.guild.voice_client.play(source, after=after_playing)
-            embed = await choose_Embeds("Main")
+            embed =  await choose_Embeds("Main")
             await ctx.send(f"Spiele jetzt: **{title}**")
 
             # Nächsten Song vorbereiten

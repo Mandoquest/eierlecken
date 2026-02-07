@@ -13,7 +13,7 @@ class Leaderboard(commands.Cog):
         """Zeigt das Leaderboard an. Top kann 10 oder 20 sein."""
         top_str = str(top)
         try:
-            embed = await choose_Embeds(
+            embed =  await choose_Embeds(
                 "leaderboard", top=top_str, user=str(ctx.author.id), bot=self.bot
             )
             view = await choose_Views(

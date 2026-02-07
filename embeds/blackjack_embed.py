@@ -38,4 +38,4 @@ async def erstelle_start_embed(user, spiel_id, einsatz, karten):
     balance = get_inventory(user.id, "MandoCoins")
     embed.set_footer(text=f"Bet: {einsatz} | Balance: {balance} Coins")
 
-    return embed, file
+    return embed

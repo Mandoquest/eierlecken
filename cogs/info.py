@@ -10,7 +10,7 @@ class Info(commands.Cog):
 
     @commands.command(name="help", aliases=["Help", "HELP", "info", "Info", "INFO"])
     async def help_command(self, ctx, *, arg=None):
-        embed = await choose_Embeds("help_erstellen", user=str(ctx.author.id), arg=arg)
+        embed =  await choose_Embeds("help_erstellen", user=str(ctx.author.id), arg=arg)
         await ctx.send(embed=embed)
 
 

@@ -15,7 +15,7 @@ class AntispamButtons(AuthorView):
     async def back_button(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed = await choose_Embeds("Main", guild=interaction.guild)
+        embed =  await choose_Embeds("Main", guild=interaction.guild)
         view = await choose_Views("Main", author_id=self.author_id)
         await interaction.response.edit_message(embed=embed, view=view)
 
@@ -25,7 +25,7 @@ class AntispamButtons(AuthorView):
     async def message_limit_button(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed = await choose_Embeds("Message_Limit", guild=interaction.guild)
+        embed =  await choose_Embeds("Message_Limit", guild=interaction.guild)
         view = await choose_Views("Message_Limit", author_id=self.author_id)
         await interaction.response.edit_message(embed=embed, view=view)
 
@@ -35,6 +35,6 @@ class AntispamButtons(AuthorView):
     async def antispam_level_button(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed = await choose_Embeds("action_on_spam", guild=interaction.guild)
+        embed =  await choose_Embeds("action_on_spam", guild=interaction.guild)
         view = await choose_Views("action_on_spam", author_id=self.author_id)
         await interaction.response.edit_message(embed=embed, view=view)

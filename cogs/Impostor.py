@@ -18,7 +18,7 @@ class Impostor(commands.Cog):
             await ctx.send("Please mention at least two players to play Impostor.")
         else:
             player_mentions = [p.mention for p in players]
-            embed = await choose_Embeds(
+            embed =  await choose_Embeds(
                 "impostor_game",
                 author=ctx.author.display_name,
                 author_id=ctx.author.id,

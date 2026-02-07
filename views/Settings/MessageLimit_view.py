@@ -16,7 +16,7 @@ class MessageLimitButtons(discord.ui.View):
     async def first_button_callback(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed = await choose_Embeds("Main", guild=interaction.guild)
+        embed =  await choose_Embeds("Main", guild=interaction.guild)
         view = await choose_Views("Main", author_id=self.author_id)
         await interaction.response.edit_message(embed=embed, view=view)
 

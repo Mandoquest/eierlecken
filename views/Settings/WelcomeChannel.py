@@ -21,7 +21,7 @@ class ChannelSelect(discord.ui.ChannelSelect):
         guild_id = interaction.guild.id
         channel_id = selected_channel.id
         set_welcome_channel(guild_id, channel_id)
-        embed = await choose_Embeds("Welcome_channel", guild=interaction.guild)
+        embed =  await choose_Embeds("Welcome_channel", guild=interaction.guild)
         view = await choose_Views("Welcome_channel", author_id=self.author_id)
         await interaction.response.edit_message(view=view, embed=embed)
 
@@ -38,7 +38,7 @@ class WelcomeChannel_View(AuthorView):
     async def back_button(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed = await choose_Embeds("Main", guild=interaction.guild)
+        embed =  await choose_Embeds("Main", guild=interaction.guild)
         view = await choose_Views("Main", author_id=self.author_id)
         await interaction.response.edit_message(embed=embed, view=view)
 
@@ -50,6 +50,6 @@ class WelcomeChannel_View(AuthorView):
     ):
         set_welcome_channel(interaction.guild.id, None)
 
-        embed = await choose_Embeds("Welcome_channel", guild=interaction.guild)
+        embed =  await choose_Embeds("Welcome_channel", guild=interaction.guild)
         view = await choose_Views("Welcome_channel", author_id=self.author_id)
         await interaction.response.edit_message(view=view, embed=embed)

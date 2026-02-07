@@ -2,6 +2,8 @@ import discord
 
 
 Mainsettings_Embed = discord.Embed(title="Settings", colour=0x5900FF)
+
+
 Mainsettings_Embed.add_field(name="1️⃣: Prefix", value="Select the Prefix of the Bot", inline=False)
 
 Mainsettings_Embed.add_field(

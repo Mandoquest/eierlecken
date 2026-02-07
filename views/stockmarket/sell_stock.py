@@ -137,6 +137,6 @@ class BackButton(Button):
             )
             return
 
-        embed = await choose_Embeds("stockmarket")
+        embed =  await choose_Embeds("stockmarket")
         view = await choose_Views("Stockmarket_page1")
         await interaction.response.edit_message(embed=embed, view=view)

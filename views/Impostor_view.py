@@ -33,7 +33,7 @@ class ImpostorStart(discord.ui.View):
         player_mentions = [p.mention for p in self.players]
         confirmed_mentions = [p.mention for p in self.players if p.id in self.confirmed]
 
-        embed = await choose_Embeds(
+        embed =  await choose_Embeds(
             "edit_impostor",
             players=player_mentions,
             confirmed=confirmed_mentions,
@@ -44,5 +44,5 @@ class ImpostorStart(discord.ui.View):
         print(f"Confirmed: {self.confirmed} / Players: {self.players}")
         if len(self.confirmed) == len(self.players):
             await choose_impostor(self.players)
-            embed = await choose_Embeds("Impostor_end", players=self.players)
+            embed =  await choose_Embeds("Impostor_end", players=self.players)
             await interaction.followup.send("All players confirmed! Check your DMs.")

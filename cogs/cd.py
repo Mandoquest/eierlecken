@@ -19,7 +19,7 @@ class Cd(commands.Cog):
 
     @commands.command()
     async def cd(self, ctx):
-        embed = await choose_Embeds("cd", user=str(ctx.author.id))
+        embed =  await choose_Embeds("cd", user=str(ctx.author.id))
 
         await ctx.send(embed=embed)
 
@@ -42,7 +42,7 @@ class Cd(commands.Cog):
         rest = check_cooldown(user_id, "daily", 86400)
         print(rest)
         if rest > 0:
-            embed = await choose_Embeds("cooldown_n_ready", user_id=user_id, rest=rest)
+            embed =  await choose_Embeds("cooldown_n_ready", user_id=user_id, rest=rest)
             Zeit = sekunden_in_stunden(rest)
             await ctx.send(embed=embed)
         else:

@@ -13,7 +13,7 @@ class Settings(commands.Cog):
     @commands.command()
     async def settings(self, ctx):
         if ctx.author.guild_permissions.administrator:
-            embed = await choose_Embeds("Main", guild=ctx.guild)
+            embed =  await choose_Embeds("Main", guild=ctx.guild)
             view = await choose_Views("Main", author_id=ctx.author.id)
             await ctx.send(embed=embed, view=view)
         else:

@@ -40,13 +40,6 @@ async def on_ready():
     view = await choose_Views("stockmarket_main")
     await channel.send(embed=embed, view=view)
 
-    @client.event
-    async def on_command_error(ctx, error):
-        try:
-            cmd_name = ctx.command.name if ctx.command else None
-            print(f"Command error in {cmd_name}: {error}")
-        except Exception as e:
-            print("Fehler in on_command_error handler:", e)
 
 @client.command()
 async def clear_all(ctx):
@@ -70,20 +63,24 @@ async def clear_all(ctx):
 @client.command()
 async def ping(ctx):
     print(ctx.author.id)
-    view = await choose_Views("Test")
-    embed = await choose_Embeds("Test")
+    view = await choose_Views("buy_Stock", ticker_symbol="NVDA", author_id=ctx.author.id)
+    embed = await choose_Embeds("Test") 
     await ctx.send(embed=embed, view=view)
 
 
 @client.command()
-async def Test(ctx):
-    print("Test command activated")
-    embed = await choose_Embeds("Test")
-    print("Embed chosen")
-    view = await choose_Views("Test")
-    print("Embed and View chosen")
-    await ctx.send(embed=embed, view=view)
-    print("Message sent")
+async def test(ctx):
+    embed, filename = await choose_Embeds("stock", ticker_symbol="NVDA")
+    file = discord.File(filename)
+    view = await choose_Views(
+        "stock",
+        ticker_symbol="NVDA",
+        author_id=ctx.author.id
+    )
+    await ctx.send(embed=embed, view=view, file=file)
+
+    os.remove(filename)
+
 
 
 @client.command()
@@ -108,3 +105,18 @@ async def main():
 
 
 asyncio.run(main())
+
+
+@client.event
+async def on_command_error(ctx, error):
+    try:
+        cmd_name = ctx.command.name if ctx.command else None
+        print(f"Command error in {cmd_name}: {error}")
+    except Exception as e:
+        print("Fehler in on_command_error handler:", e)
+
+
+##################################
+##     BuyStock View und Embed   ##
+##         mit mechanic          ##
+##################################

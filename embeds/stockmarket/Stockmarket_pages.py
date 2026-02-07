@@ -1,24 +1,102 @@
-import discord 
+import discord
+
 
 stockm_p1 = discord.Embed(
-    title="🔍 Stock Market Overview",
+    title="📊 Stock Market Overview",
     description=(
-        "Explore the latest stock market data here!\n"
-        "Get insights on price movements, trends, and market dynamics."
+        "**Discover popular stocks at a glance**\n"
+        "Click the buttons below to view detailed market data, trends and price movements."
     ),
-    color=discord.Color.blue(),
+    color=discord.Color.blurple(),
 )
 stockm_p1.add_field(
-    name="🍎 APPLE INC (AAPL)",
-    description="for more info click the button below",
+    name="🍎 Apple Inc.",
+    value="`AAPL`\nClick below for details",
+    inline=True,
 )
 stockm_p1.add_field(
-    name="🚗 TESLA INC (TSLA)",
-    description="for more info click the button below",
+    name="🚗 Tesla Inc.",
+    value="`TSLA`\nClick below for details",
+    inline=True,
 )
 stockm_p1.add_field(
-    name="💼 MICROSOFT CORP (MSFT)",
-    description="for more info click the button below",
+    name="💼 Microsoft Corp.",
+    value="`MSFT`\nClick below for details",
+    inline=True,
 )
+stockm_p1.set_thumbnail(url="https://cdn-icons-png.flaticon.com/512/2103/2103658.png")
+stockm_p1.set_footer(text="Page 1 • Stock Market Dashboard")
 
-stockm_p1.set_footer(text="Use the buttons below to get detailed stock info.")
+
+
+stockm_p2 = discord.Embed(
+    title="📊 Stock Market Overview",
+    description=(
+        "**Discover popular stocks at a glance**\n"
+        "Click the buttons below to view detailed market data, trends and price movements."
+    ),
+    color=discord.Color.blurple(),
+)
+stockm_p2.add_field(
+    name="📦 Amazon",
+    value="`AMZN`\nClick below for details",
+    inline=True,
+)
+stockm_p2.add_field(
+    name="🔵 Google",
+    value="`GOOGL`\nClick below for details",
+    inline=True,
+)
+stockm_p2.add_field(
+    name="🎬 Netflix",
+    value="`NFLX`\nClick below for details",
+    inline=True,
+)
+stockm_p2.set_thumbnail(url="https://cdn-icons-png.flaticon.com/512/2103/2103658.png")
+stockm_p2.set_footer(text="Page 2 • Stock Market Dashboard")
+
+
+
+stockm_p3 = discord.Embed(
+    title="📊 Stock Market Overview",
+    description=(
+        "**Discover popular stocks at a glance**\n"
+        "Click the buttons below to view detailed market data, trends and price movements."
+    ),
+    color=discord.Color.blurple(),
+)
+stockm_p3.add_field(
+    name="🍔 McDonald's",
+    value="`MCD`\nClick below for details",
+    inline=True,
+)
+stockm_p3.add_field(
+    name="🎮 Ubisoft",
+    value="`UBSFY`\nClick below for details",
+    inline=True,
+)
+stockm_p3.add_field(
+    name="🥤 Coca-Cola Company",
+    value="`KO`\nClick below for details",
+    inline=True,
+)
+stockm_p3.set_thumbnail(url="https://cdn-icons-png.flaticon.com/512/2103/2103658.png")
+stockm_p3.set_footer(text="Page 3 • Stock Market Dashboard")
+
+
+
+stockm_p4 = discord.Embed(
+    title="📊 Stock Market Overview",
+    description=(
+        "**Discover popular stocks at a glance**\n"
+        "Click the buttons below to view detailed market data, trends and price movements."
+    ),
+    color=discord.Color.blurple(),
+)
+stockm_p4.add_field(
+    name="🟢 NVIDIA",
+    value="`NVDA`\nClick below for details",
+    inline=True,
+)
+stockm_p4.set_thumbnail(url="https://cdn-icons-png.flaticon.com/512/2103/2103658.png")
+stockm_p4.set_footer(text="Page 4 • Stock Market Dashboard")

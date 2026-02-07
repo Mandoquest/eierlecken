@@ -26,7 +26,7 @@ class Scratchcard(commands.Cog):
         rest = check_cooldown(str(ctx.author.id), "rubbellos", 36000)
         print("Cooldown:", rest)
         if rest > 0:
-            embed = await choose_Embeds(
+            embed =  await choose_Embeds(
                 "cooldown_n_ready", user_id=str(ctx.author.id), rest=rest
             )
             await ctx.send(embed=embed)
@@ -35,7 +35,7 @@ class Scratchcard(commands.Cog):
         update_cooldown(str(ctx.author.id), "rubbellos")
         remove_item(ctx.author.id, "MandoCoins", 5000)
 
-        embed = await choose_Embeds("scratchcard_erstellen", user=ctx.author.id)
+        embed =  await choose_Embeds("scratchcard_erstellen", user=ctx.author.id)
 
         await ctx.send(embed=embed)
 

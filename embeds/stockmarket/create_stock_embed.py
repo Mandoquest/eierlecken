@@ -1,128 +1,70 @@
-import discord
+import matplotlib
+matplotlib.use("Agg")
+import matplotlib.pyplot as plt
 import yfinance as yf
-import asyncio
+import discord
+from datetime import datetime
 
+def create_stock_embed_sync(ticker_symbol: str):
+    # Aktie abrufen
+    stock = yf.Ticker(ticker_symbol)
+    data = stock.history(period="3mo")
 
-async def create_stock_embed(ticker_symbol: str) -> discord.Embed:
-    loop = asyncio.get_running_loop()
-    ticker_symbol = ticker_symbol.strip().upper()
-
-    def fetch_info():
-        ticker = yf.Ticker(ticker_symbol)
-        try:
-            # Fast info + full info as fallback
-            fast = ticker.fast_info or {}
-            full = ticker.info or {}
-            return fast, full
-        except Exception:
-            return {}, {}
-
-    try:
-        fast_info, full_info = await asyncio.wait_for(
-            loop.run_in_executor(None, fetch_info), timeout=3.0
-        )
-    except asyncio.TimeoutError:
+    # Fehlerbehandlung
+    if data.empty:
         embed = discord.Embed(
-            title=f"{ticker_symbol}",
-            description="Error: Timeout while fetching data.",
-            color=discord.Color.dark_gray(),
+            title=f"Aktie {ticker_symbol} nicht gefunden",
+            description="Bitte überprüfe das Ticker-Symbol.",
+            color=discord.Color.red()
         )
-        embed.add_field(
-            name="Notice", value="Yahoo Finance did not respond.", inline=False
+        return embed, None
+
+    # Plot vorbereiten
+    fig, ax = plt.subplots(figsize=(10, 5))
+    ax.set_facecolor("white")  # Hintergrund weiß
+
+    # Linien zwischen Schlusskursen einzeichnen mit leichter Transparenz
+    for i in range(1, len(data)):
+        color = 'green' if data['Close'].iloc[i] >= data['Close'].iloc[i-1] else 'red'
+        ax.plot(
+            data.index[i-1:i+1], 
+            data['Close'].iloc[i-1:i+1], 
+            color=color, 
+            linewidth=2, 
+            alpha=0.8,   # leichte Transparenz für moderneren Look
+            zorder=3
         )
-        embed.set_footer(text="Please try again later.")
-        return embed
-    except Exception as e:
-        embed = discord.Embed(
-            title=f"{ticker_symbol}",
-            description="Error fetching data.",
-            color=discord.Color.dark_gray(),
-        )
-        embed.add_field(name="Error", value=str(e), inline=False)
-        embed.set_footer(text="Error fetching from Yahoo Finance.")
-        return embed
 
-    if not fast_info and not full_info:
-        embed = discord.Embed(
-            title=f"{ticker_symbol}",
-            description="Ticker not found or no data available.",
-            color=discord.Color.dark_gray(),
-        )
-        embed.add_field(
-            name="Notice", value="Check the ticker symbol (e.g., AAPL).", inline=False
-        )
-        embed.set_footer(text="Data source: Yahoo Finance")
-        return embed
+    # Achsen sichtbar und durchgehend
+    ax.spines['top'].set_visible(False)
+    ax.spines['right'].set_visible(False)
+    ax.spines['bottom'].set_color('black')
+    ax.spines['bottom'].set_linewidth(1.5)
+    ax.spines['left'].set_color('black')
+    ax.spines['left'].set_linewidth(1.5)
 
-    # Get values, fallback from full info if missing
-    name = fast_info.get("shortName") or full_info.get("shortName") or ticker_symbol
-    current_price = fast_info.get("last_price") or full_info.get("currentPrice", "N/A")
-    change_percent = fast_info.get("change_percent") or full_info.get("regularMarketChangePercent")
-    market_cap = fast_info.get("market_cap") or full_info.get("marketCap", "N/A")
-    volume = fast_info.get("volume") or full_info.get("volume", "N/A")
-    year_high = fast_info.get("year_high") or full_info.get("fiftyTwoWeekHigh", "N/A")
-    year_low = fast_info.get("year_low") or full_info.get("fiftyTwoWeekLow", "N/A")
-    prev_close = fast_info.get("previous_close") or full_info.get("previousClose", "N/A")
-    open_price = fast_info.get("open") or full_info.get("open", "N/A")
+    # Ticks
+    ax.tick_params(axis='y', which='both', direction='in', length=5, color='black')
+    ax.tick_params(axis='x', rotation=20, color='black')
 
-    # Format numbers for better readability
-    if isinstance(current_price, (int, float)):
-        current_price = f"${current_price:,.2f}"
-    if isinstance(open_price, (int, float)):
-        open_price = f"${open_price:,.2f}"
-    if isinstance(prev_close, (int, float)):
-        prev_close = f"${prev_close:,.2f}"
-    if isinstance(market_cap, (int, float)):
-        if market_cap >= 1_000_000_000:
-            market_cap = f"${market_cap / 1_000_000_000:.2f}B"
-        elif market_cap >= 1_000_000:
-            market_cap = f"${market_cap / 1_000_000:.2f}M"
-        else:
-            market_cap = f"${market_cap}"
-    if isinstance(volume, (int, float)):
-        volume = f"{volume:,}"
+    # Titel und X-Achse begrenzen
+    ax.set_title(f"{ticker_symbol} - Letzte 3 Monate", fontsize=16, weight='bold')
+    ax.set_xlim(data.index[0], data.index[-1])
 
-    # Embed color based on daily change
-    if change_percent is None:
-        color = discord.Color.dark_gray()
-    elif change_percent >= 0:
-        color = discord.Color.green()
-    else:
-        color = discord.Color.red()
+    # Plot speichern
+    filename = f"chart_{ticker_symbol}.png"
+    plt.tight_layout()
+    plt.savefig(filename)
+    plt.close(fig)
 
+    # Discord Embed erstellen
     embed = discord.Embed(
-        title=f"{name} ({ticker_symbol})",
-        description="Stock Information (Yahoo Finance)",
-        color=color,
+        title=f"{ticker_symbol} Aktieninfo",
+        description=f"Aktueller Kurs: ${data['Close'].iloc[-1]:.2f}",
+        color=discord.Color.blue(),
+        timestamp=datetime.utcnow()
     )
+    embed.set_image(url=f"attachment://{filename}")
+    
 
-    if ticker_symbol.isalpha():
-        domain_map = {
-            "AAPL": "apple.com",
-            "MSFT": "microsoft.com",
-            "AMZN": "amazon.com",
-            "GOOGL": "abc.xyz",
-            "NVDA": "nvidia.com",
-            "META": "meta.com",
-            "TSLA": "tesla.com",
-            "JPM": "jpmorganchase.com",
-        }
-        domain = domain_map.get(ticker_symbol, f"{ticker_symbol.lower()}.com")
-        embed.set_thumbnail(url=f"https://logo.clearbit.com/{domain}")
-
-    embed.add_field(name="Price", value=f"{current_price}", inline=True)
-    embed.add_field(
-        name="Daily Change",
-        value=(f"{change_percent:.2f}%" if isinstance(change_percent, (int, float)) else "N/A"),
-        inline=True,
-    )
-    embed.add_field(name="Market Cap", value=f"{market_cap}", inline=False)
-    embed.add_field(
-        name="52-Week High / Low", value=f"{year_high} / {year_low}", inline=False
-    )
-    embed.add_field(name="Volume", value=f"{volume}", inline=True)
-    embed.add_field(name="Open Price", value=f"{open_price}", inline=True)
-    embed.add_field(name="Previous Close", value=f"{prev_close}", inline=True)
-
-    embed.set_footer(text="Data from Yahoo Finance (fast_info + info)")
-    return embed
+    return embed, filename

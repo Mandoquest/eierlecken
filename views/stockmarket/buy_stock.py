@@ -3,19 +3,20 @@ from discord.ui import View, Select, Button
 from funktionen.inv_interface import add_item, remove_item, get_inventory
 from funktionen.choose_Views import choose_Views
 from funktionen.choose_Embeds import choose_Embeds
+from funktionen.protectetview import ProtectedView
 
 
-class StockBuyView(View):
-    def __init__(self, ticker_symbol: str, author_id: int, value: int):
-        super().__init__(timeout=60)
+class StockBuyView(ProtectedView):
+    def __init__(self, ticker_symbol: str, author_id: int, value: int = 0):
+        super().__init__(author_id, timeout=60)
         self.ticker = ticker_symbol
         self.author_id = author_id
         self.price = value
         self.amount: float | None = None
 
         self.add_item(AmountSelect(self))
-        self.add_item(ConfirmBuy(self))
         self.add_item(BackButton(self))
+        self.add_item(ConfirmBuy(self))
 
 
 class AmountSelect(Select):
@@ -65,10 +66,11 @@ class ConfirmBuy(Button):
 
 
 class BackButton(Button):
-    def __init__(self, view):
-        super().__init__(label="Back", style=discord.ButtonStyle.red)
+    def __init__(self, view: StockBuyView):
+        self.view_ref = view
+        super().__init__(label="← Back", style=discord.ButtonStyle.red)
 
     async def callback(self, interaction: discord.Interaction):
-        embed = await choose_Embeds("stockmarket")
-        view = await choose_Views("stock_page_1")
+        view = await choose_Views("stockmarket_main", author_id=self.view_ref.author_id)
+        embed = await choose_Embeds("stockmarket_main")
         await interaction.response.edit_message(embed=embed, view=view)

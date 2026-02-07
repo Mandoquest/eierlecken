@@ -27,7 +27,7 @@ class LeaderboardTop20Button(discord.ui.Button):
             )
             return
 
-        embed = await choose_Embeds("leaderboard", top="20", user=self.user)
+        embed =  await choose_Embeds("leaderboard", top="20", user=self.user)
         await interaction.response.edit_message(
             embed=embed, view=create_leaderboard_buttons(top="20", user=self.user)
         )
@@ -45,7 +45,7 @@ class LeaderboardTop10Button(discord.ui.Button):
             )
             return
 
-        embed = await choose_Embeds("leaderboard", top="10", user=self.user)
+        embed =  await choose_Embeds("leaderboard", top="10", user=self.user)
         await interaction.response.edit_message(
             embed=embed, view=create_leaderboard_buttons(top="10", user=self.user)
         )

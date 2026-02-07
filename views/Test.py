@@ -1,15 +1,9 @@
-import discord
-from discord.ui import View, Button
+import discord 
 
-
-class Test(View):
+class TestView(discord.ui.View):
     def __init__(self):
         super().__init__(timeout=None)
 
-    @discord.ui.button(label="Test Button", style=discord.ButtonStyle.primary)
-    async def test_button_callback(
-        self, interaction: discord.Interaction, button: discord.ui.Button
-    ):
-        await interaction.response.send_message(
-            "Du hast den Test Button gedrückt!", ephemeral=True
-        )
+    @discord.ui.button(label="Klicke mich!", style=discord.ButtonStyle.primary, custom_id="test_button")
+    async def test_button(self, interaction: discord.Interaction, button: discord.ui.Button):
+        await interaction.response.send_message("Du hast den Test-Button geklickt!", ephemeral=True)

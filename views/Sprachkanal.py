@@ -24,7 +24,7 @@ def Sprachkanal_Buttons(**kwargs):
                 guild = interaction.guild
                 vc = await guild.create_voice_channel(name=f"Create Voice Channel")
                 set_channel(guild.id, vc.id)
-                embed = await choose_Embeds("Sprachkanal", Guild=guild)
+                embed =  await choose_Embeds("Sprachkanal", Guild=guild)
                 view = await choose_Views("Sprachkanal", Guild=guild)
                 await interaction.response.edit_message(embed=embed, view=view)
 
@@ -45,7 +45,7 @@ def Sprachkanal_Buttons(**kwargs):
                 channel = guild_obj.get_channel(channel_id)
                 await channel.delete()
                 set_channel(guild_obj.id, None)
-                embed = await choose_Embeds("Sprachkanal", Guild=guild_obj)
+                embed =  await choose_Embeds("Sprachkanal", Guild=guild_obj)
                 view = await choose_Views("Sprachkanal", Guild=guild_obj)
                 await interaction.response.edit_message(embed=embed, view=view)
 

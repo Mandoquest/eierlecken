@@ -59,10 +59,10 @@ class Blackjack(commands.Cog):
             "aktion_laeuft": False,
         }
 
-        embed, file = await erstelle_start_embed(
+        embed = await erstelle_start_embed(
             ctx.author, spiel_id, einsatz, player_cards
         )
-        await ctx.send(embed=embed, file=file, view=view)
+        await ctx.send(embed=embed, view=view)
 
     @commands.command(name="balance", aliases=["bal", "Bal", "Balance", "b", "B"])
     async def balance(self, ctx):

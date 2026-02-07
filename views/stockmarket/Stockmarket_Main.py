@@ -3,11 +3,16 @@ from discord.ui import View, Button
 from funktionen.choose_Embeds import choose_Embeds
 from funktionen.choose_Views import choose_Views
 
+from funktionen.protectetview import ProtectedView
 
-class Stockmarket_Main(View):
-    def __init__(self, *, timeout=None):
-        super().__init__(timeout=timeout)
 
+
+
+class stockmarket_main(ProtectedView):
+    def __init__(self, author_id: int):
+        super().__init__(author_id)
+
+    
     @discord.ui.button(
         label="Stockmarket",
         style=discord.ButtonStyle.blurple,
@@ -17,10 +22,12 @@ class Stockmarket_Main(View):
     async def stockmarket_callback(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed = await choose_Embeds("stockm_p1")
-        view = await choose_Views("stockm_p1")
+        embed =  await choose_Embeds("stockm_p1")
+        view = await choose_Views("stockm_p1", author_id=self.author_id)
         await interaction.response.edit_message(embed=embed, view=view)
 
+    
+    
     @discord.ui.button(
         label="Your Portfolio",
         style=discord.ButtonStyle.blurple,
@@ -30,10 +37,12 @@ class Stockmarket_Main(View):
     async def your_stocks_callback(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed = await choose_Embeds("your_portfolio", author_id=interaction.user.id)
-        # view = await choose_Views("your_portfolio", author_id=interaction.user.id)
-        await interaction.response.edit_message(embed=embed)
+        embed =  await choose_Embeds("your_portfolio", author_id=self.author_id)
+        view = await choose_Views("your_portfolio", author_id=self.author_id)
+        await interaction.response.edit_message(embed=embed, view=view)
 
+    
+    
     @discord.ui.button(
         label="Financial Statistics",
         style=discord.ButtonStyle.blurple,
@@ -43,10 +52,10 @@ class Stockmarket_Main(View):
     async def Fincancial_statistics_callback(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed = await choose_Embeds(
-            "Fincancial_statistics", author_id=interaction.user.id
+        embed =  await choose_Embeds(
+            "Fincancial_statistics", author_id=self.author_id
         )
         view = await choose_Views(
-            "Fincancial_statistics", author_id=interaction.user.id
+            "Fincancial_statistics", author_id=self.author_id
         )
         await interaction.response.edit_message(embed=embed, view=view)

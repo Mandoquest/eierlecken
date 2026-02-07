@@ -27,7 +27,7 @@ class Sprachkanal(commands.Cog):
     @commands.command(name="Voicechannel", aliases=["vc", "voicechannel"])
     async def sprachkanal(self, ctx):
         if ctx.author.guild_permissions.administrator:
-            embed = await choose_Embeds("Sprachkanal", Guild=ctx.guild)
+            embed =  await choose_Embeds("Sprachkanal", Guild=ctx.guild)
             view = await choose_Views("Sprachkanal", Guild=ctx.guild)
             await ctx.send(embed=embed, view=view)
         else:
