@@ -5,12 +5,15 @@ from funktionen.choose_Embeds import choose_Embeds
 from funktionen.choose_Views import choose_Views
 
 class StockSellView(View):
-    def __init__(self, ticker_symbol: str, author_id: int, value: int):
+    def __init__(self, ticker_symbol: str, author_id: int, value: float):
         super().__init__(timeout=60)
         self.ticker = ticker_symbol
+        self.ticker_symbol = ticker_symbol  # Store both names for compatibility
         self.author_id = author_id
-        self.price = value
-        self.amount: float | None = None
+        # keep both `price` and `value` attributes so other code can refer to either
+        self.price: float = float(value)
+        self.value: float = float(value)
+        self.selected_amount: float | None = None
         self.add_item(StockAmountSelect(self))
         self.add_item(BackButton(self))
         self.add_item(ConfirmButton(self))
@@ -64,6 +67,7 @@ class ConfirmButton(Button):
         )
 
     async def callback(self, interaction: discord.Interaction):
+        print("ConfirmButton clicked")
         if interaction.user.id != self.view_ref.author_id:
             await interaction.response.send_message(
                 "❌ This button is not for you!",
@@ -90,7 +94,8 @@ class ConfirmButton(Button):
             )
             return
 
-        earnings = self.view_ref.selected_amount * self.view_ref.value
+        # use the stored price (same as value) to compute earnings
+        earnings = self.view_ref.selected_amount * self.view_ref.price
 
         
         remove_item(
@@ -113,10 +118,13 @@ class ConfirmButton(Button):
             ephemeral=True
         )
 
-        # Optional: disable view after selling
-        self.view_ref.stop()
-        for item in self.view_ref.children:
-            item.disabled = True
+        # disable only the amount selector and confirm button so the user can't resell
+        # keep the back button enabled so they can still navigate away
+        for child in self.view_ref.children:
+            # dropdown or confirm button should be disabled
+            if isinstance(child, Select) or (isinstance(child, Button) and child.label == "Confirm Sell"):
+                child.disabled = True
+        # we don't stop the view here; leaving it running lets the back-button remain active
         await interaction.message.edit(view=self.view_ref)
 
 
@@ -137,6 +145,14 @@ class BackButton(Button):
             )
             return
 
-        embed =  await choose_Embeds("stockmarket")
-        view = await choose_Views("Stockmarket_page1")
+
+        # navigate back to the individual stock page where the user came from
+        view = await choose_Views(
+            "stockmarket_main",
+            author_id=self.view_ref.author_id,
+        )
+        embed = await choose_Embeds(
+            "stockmarket_main",
+            author_id=self.view_ref.author_id,
+        )
         await interaction.response.edit_message(embed=embed, view=view)

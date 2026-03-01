@@ -4,6 +4,19 @@ import matplotlib.pyplot as plt
 import yfinance as yf
 import discord
 from datetime import datetime
+import os
+import asyncio
+
+
+async def cleanup_file(filename: str, delay: int = 60):
+    """Löscht eine Datei nach einer bestimmten Zeit (Standard: 60 Sekunden)"""
+    try:
+        await asyncio.sleep(delay)
+        if os.path.exists(filename):
+            os.remove(filename)
+    except Exception as e:
+        print(f"Fehler beim Löschen der Datei {filename}: {e}")
+
 
 def create_stock_embed_sync(ticker_symbol: str):
     # Aktie abrufen
@@ -67,4 +80,12 @@ def create_stock_embed_sync(ticker_symbol: str):
     embed.set_image(url=f"attachment://{filename}")
     
 
+    return embed, filename
+
+
+async def create_stock_embed(ticker_symbol: str):
+    """Asynchrone Wrapper-Funktion, die das Embed erstellt und die Datei automatisch löscht"""
+    embed, filename = await asyncio.to_thread(create_stock_embed_sync, ticker_symbol)
+    # Starte den Cleanup im Hintergrund (ohne zu warten)
+    asyncio.create_task(cleanup_file(filename, delay=60))
     return embed, filename

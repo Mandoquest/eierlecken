@@ -2,9 +2,11 @@ import discord
 import os
 from discord.ext import commands
 import asyncio
+import sys
 from dotenv import load_dotenv
 from funktionen.choose_Embeds import choose_Embeds
 from funktionen.choose_Views import choose_Views
+from funktionen.error_handler import report_exception
 
 client = commands.Bot(
     command_prefix="!", intents=discord.Intents.all(), help_command=None
@@ -21,7 +23,7 @@ async def load():
             try:
                 await client.load_extension(ext)
             except Exception as e:
-                print(f"Fehler beim Laden von {filename}: {e}")
+                await report_exception(client, e, context=f"load extension {filename}", admin_channel_id=ERROR_CHANNEL_ID if 'ERROR_CHANNEL_ID' in globals() else None, admin_user_id=ADMIN_USER_ID if 'ADMIN_USER_ID' in globals() else None)
 
 
 @client.event
@@ -33,7 +35,7 @@ async def on_ready():
     try:
         channel = await client.fetch_channel(CHANNEL_ID)
     except Exception as e:
-        print("Fehler beim Fetchen des Channels:", e)
+        await report_exception(client, e, context="on_ready fetch channel", admin_channel_id=ERROR_CHANNEL_ID if 'ERROR_CHANNEL_ID' in globals() else None, admin_user_id=ADMIN_USER_ID if 'ADMIN_USER_ID' in globals() else None)
         return
 
     embed = await choose_Embeds("stockmarket_main")
@@ -67,6 +69,11 @@ async def ping(ctx):
     embed = await choose_Embeds("Test") 
     await ctx.send(embed=embed, view=view)
 
+@client.command()
+async def line(ctx):
+    print("--------------------------------------------------------------------------------")
+    await ctx.send("Done")
+
 
 @client.command()
 async def test(ctx):
@@ -78,8 +85,6 @@ async def test(ctx):
         author_id=ctx.author.id
     )
     await ctx.send(embed=embed, view=view, file=file)
-
-    os.remove(filename)
 
 
 
@@ -97,26 +102,39 @@ async def join(ctx):
 load_dotenv()
 token = os.getenv("DISCORD_TOKEN")
 
+# Optional: set an admin user id or an admin channel id via environment variables
+ERROR_CHANNEL_ID = int(os.getenv("ERROR_CHANNEL_ID")) if os.getenv("ERROR_CHANNEL_ID") else None
+ADMIN_USER_ID = int(os.getenv("ADMIN_USER_ID")) if os.getenv("ADMIN_USER_ID") else None
+
 
 async def main():
     async with client:
+        # Set asyncio loop exception handler to report uncaught exceptions
+        loop = asyncio.get_running_loop()
+
+        def _loop_exc(loop, context):
+            exc = context.get('exception') or Exception(context.get('message'))
+            asyncio.create_task(report_exception(client, exc, context=str(context), admin_channel_id=ERROR_CHANNEL_ID, admin_user_id=ADMIN_USER_ID))
+
+        loop.set_exception_handler(_loop_exc)
+
         await load()
         await client.start(token)
-
-
-asyncio.run(main())
 
 
 @client.event
 async def on_command_error(ctx, error):
     try:
         cmd_name = ctx.command.name if ctx.command else None
-        print(f"Command error in {cmd_name}: {error}")
+        await report_exception(client, error, context=f"command {cmd_name} by {ctx.author.id}", admin_channel_id=ERROR_CHANNEL_ID, admin_user_id=ADMIN_USER_ID)
     except Exception as e:
         print("Fehler in on_command_error handler:", e)
 
 
+asyncio.run(main())
+
+
 ##################################
-##     BuyStock View und Embed   ##
-##         mit mechanic          ##
+##          Sellbutton          ##
+##         Back Button          ##
 ##################################

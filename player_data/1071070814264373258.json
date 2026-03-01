@@ -1,6 +1,8 @@
 {
     "player_id": "1071070814264373258",
     "items": {
-        "MandoCoins": 2030
+        "MandoCoins": {
+            "amount": 2030
+        }
     }
 }

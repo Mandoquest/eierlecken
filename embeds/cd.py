@@ -21,21 +21,21 @@ async def erstelle_cd_embed(user):
     if rest_rubbellos > 0:
         embed.add_field(
             name="",
-            value=f"`!scratchcard`<a:typing:1410736488915669124> <t:{cooldown_rubbellos_ende}:R>",
+            value=f"`!scratchcard`- <a:typing:1410736488915669124> <t:{cooldown_rubbellos_ende}:R>",
             inline=False,
         )
     else:
-        embed.add_field(name="", value="`!scratchcard` ✅", inline=False)
+        embed.add_field(name="", value="`!scratchcard` - ✅", inline=False)
 
     # Daily
     if rest_daily > 0:
         embed.add_field(
             name="",
-            value=f"`!daily` <a:typing:1410736488915669124> <t:{cooldown_daily_ende}:R>",
+            value=f"`!daily` - <a:typing:1410736488915669124> <t:{cooldown_daily_ende}:R>",
             inline=False,
         )
     else:
-        embed.add_field(name="", value="`!daily` ✅", inline=False)
+        embed.add_field(name="", value="`!daily` - ✅", inline=False)
 
     return embed
 

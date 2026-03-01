@@ -4,7 +4,7 @@ import aiohttp
 from funktionen.inv_interface import get_inventory, add_item
 from datenbanken.aktive_Spiele import aktive_spiele
 from funktionen.utils import kombiniere_kartenbilder
-from funktionen.utils import Zahlen_verkleineren
+from funktionen.utils import zahlen_verkleinern
 import asyncio
 
 
@@ -77,7 +77,7 @@ class BlackjackView(discord.ui.View):
         embed = discord.Embed(title=titel, description=text, color=farbe)
         embed.set_image(url="attachment://hand.png")
         Guthaben = get_inventory(self.user_id, "MandoCoins")
-        Konto = Zahlen_verkleineren(Guthaben)
+        Konto = zahlen_verkleinern(Guthaben)
         embed.set_footer(text=f"Balance: {Konto} Coins")
 
         await interaction.edit_original_response(

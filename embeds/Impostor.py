@@ -116,3 +116,34 @@ def edit_impostor(players, confirmed=None, author=None, **kwargs) -> discord.Emb
 
     embed.set_footer(text="Click the ✅ Confirm button to join the game.")
     return embed
+
+
+def Impostor_end(players, **kwargs) -> discord.Embed:
+    """Embed shown after all players confirmed and roles/words were sent.
+
+    - Accepts `players` as a list of member objects or mention strings.
+    - Does NOT reveal the impostor or the secret word (they were DM'd).
+    """
+    if isinstance(players, list):
+        # accept discord.Member or mention strings
+        try:
+            players_list = [p.mention if hasattr(p, "mention") else str(p) for p in players]
+        except Exception:
+            players_list = [str(p) for p in players]
+        players_str = "\n".join(players_list)
+    else:
+        players_str = str(players)
+
+    embed = discord.Embed(
+        title="🕵️ Impostor — Spiel gestartet",
+        colour=0x00ff00,
+        description=(
+            "Alle Spieler haben bestätigt und die Rollen/Wörter wurden per DM verschickt.\n"
+            "Das Impostor bleibt geheim — viel Spaß beim Spielen!"
+        )
+    )
+
+    embed.add_field(name="👥 Spieler", value=players_str or "Keine Spieler", inline=False)
+    embed.add_field(name="📬 Check DMs", value="Jeder Spieler wurde per DM informiert. Das Spiel läuft nun!", inline=False)
+    embed.set_footer(text="Am Ende des Spiels könnt ihr den Impostor aufdecken bzw. abstimmen.")
+    return embed

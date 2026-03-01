@@ -2,14 +2,22 @@
     "player_id": 984039672474914827,
     "items": {
         "MandoCoins": {
-            "amount": 149969712
-        },
-        "self.ticker_symbol": {
-            "amount": 2.0,
-            "category": "stock"
+            "amount": 149951661.26200002
         },
         "AAPL": {
-            "amount": 2.2,
+            "amount": 1,
+            "category": "stock"
+        },
+        "TSLA": {
+            "amount": 5.0,
+            "category": "stock"
+        },
+        "MSFT": {
+            "amount": 5.0,
+            "category": "stock"
+        },
+        "AMZN": {
+            "amount": 10.0,
             "category": "stock"
         }
     }

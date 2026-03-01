@@ -37,9 +37,12 @@ class stockmarket_main(ProtectedView):
     async def your_stocks_callback(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
+        print(f"User {interaction.user.id} clicked on Your Portfolio button")
         embed =  await choose_Embeds("your_portfolio", author_id=self.author_id)
-        view = await choose_Views("your_portfolio", author_id=self.author_id)
-        await interaction.response.edit_message(embed=embed, view=view)
+        print(f"Generated portfolio embed for user {interaction.user.id}")
+        #view = await choose_Views("your_portfolio", author_id=self.author_id)
+        print
+        await interaction.response.edit_message(embed=embed)
 
     
     
@@ -52,10 +55,6 @@ class stockmarket_main(ProtectedView):
     async def Fincancial_statistics_callback(
         self, interaction: discord.Interaction, button: discord.ui.Button
     ):
-        embed =  await choose_Embeds(
-            "Fincancial_statistics", author_id=self.author_id
-        )
-        view = await choose_Views(
-            "Fincancial_statistics", author_id=self.author_id
-        )
+        embed =  await choose_Embeds("Fincancial_Statistics")
+        view = await choose_Views("Fincancial_Statistics", author_id=self.author_id)
         await interaction.response.edit_message(embed=embed, view=view)

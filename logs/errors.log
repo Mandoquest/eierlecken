@@ -1,0 +1,2839 @@
+[2026-02-07T01:39:49.059865] ERR-1770424789-4741
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-07T01:45:40.792177] ERR-1770425140-1255
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-07T01:45:47.475543] ERR-1770425147-7626
+Context: command daily by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 45, in daily
+    embed =  await choose_Embeds("cooldown_n_ready", user_id=user_id, rest=rest)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 52, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'cooldown_n_ready' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'cooldown_n_ready' ist nicht definiert.
+
+
+[2026-02-07T01:52:22.577733] ERR-1770425542-2063
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-07T01:52:47.166580] ERR-1770425567-1677
+Context: command daily by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 45, in daily
+    embed =  await choose_Embeds("cooldown_n_ready", user_id=user_id, rest=rest)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 52, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'cooldown_n_ready' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'cooldown_n_ready' ist nicht definiert.
+
+
+[2026-02-07T01:56:40.879669] ERR-1770425800-5166
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-07T01:56:45.195587] ERR-1770425805-8595
+Context: command daily by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 44, in daily
+    embed =  await choose_Embeds("cooldown_n_ready", user_id=user_id, rest=rest)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 52, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'cooldown_n_ready' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'cooldown_n_ready' ist nicht definiert.
+
+
+[2026-02-07T01:56:45.196283] ERR-1770425805-9223
+Context: command daily by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 44, in daily
+    embed =  await choose_Embeds("cooldown_n_ready", user_id=user_id, rest=rest)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 52, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'cooldown_n_ready' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'cooldown_n_ready' ist nicht definiert.
+
+
+[2026-02-08T21:15:00.440834] ERR-1770581700-5729
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:15:14.113390] ERR-1770581714-4600
+Context: command daily by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 50, in daily
+    neues_guthaben = Zahlen_verkleineren(get_inventory(user_id, "MandoCoins"))
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py", line 26, in Zahlen_verkleineren
+    if Zahl >= value:
+       ^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'dict' and 'int'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: '>=' not supported between instances of 'dict' and 'int'
+
+
+[2026-02-08T21:15:23.259041] ERR-1770581723-7442
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "cs" is not found
+
+
+[2026-02-08T21:15:24.978375] ERR-1770581724-4391
+Context: command cd by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 22, in cd
+    embed =  await choose_Embeds("cd", user=str(ctx.author.id))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 52, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'cd' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'cd' ist nicht definiert.
+
+
+[2026-02-08T21:17:41.636157] ERR-1770581861-6338
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:17:51.875799] ERR-1770581871-8106
+Context: command daily by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 48, in daily
+    embed =  await choose_Embeds("cooldown_n_ready", user_id=user_id, rest=rest)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 52, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'cooldown_n_ready' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'cooldown_n_ready' ist nicht definiert.
+
+
+[2026-02-08T21:18:04.218500] ERR-1770581884-7254
+Context: command daily by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 58, in daily
+    neues_guthaben = Zahlen_verkleineren(get_inventory(user_id, "MandoCoins"))
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py", line 26, in Zahlen_verkleineren
+    if Zahl >= value:
+       ^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'dict' and 'int'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: '>=' not supported between instances of 'dict' and 'int'
+
+
+[2026-02-08T21:19:21.635036] ERR-1770581961-6238
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:19:39.697504] ERR-1770581979-8410
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:22:18.658824] ERR-1770582138-7075
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:22:50.716498] ERR-1770582170-8152
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:32:21.846795] ERR-1770582741-3622
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:33:25.477162] ERR-1770582805-5981
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "dauky" is not found
+
+
+[2026-02-08T21:33:28.593594] ERR-1770582808-4223
+Context: command daily by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 58, in daily
+    neues_guthaben = Zahlen_verkleineren(get_inventory(user_id, "MandoCoins"))
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py", line 26, in Zahlen_verkleineren
+    if Zahl >= value:
+       ^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'dict' and 'int'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: '>=' not supported between instances of 'dict' and 'int'
+
+
+[2026-02-08T21:37:41.418346] ERR-1770583061-5128
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-08T21:37:41.432036] ERR-1770583061-8549
+Context: load extension cd.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 13, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.cd' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-08T21:37:44.962694] ERR-1770583064-5982
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:37:55.446615] ERR-1770583075-1785
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "daily" is not found
+
+
+[2026-02-08T21:38:00.148007] ERR-1770583080-5374
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "daily" is not found
+
+
+[2026-02-08T21:38:13.799425] ERR-1770583093-5447
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "daily" is not found
+
+
+[2026-02-08T21:38:27.306607] ERR-1770583107-7360
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-08T21:38:27.313191] ERR-1770583107-7458
+Context: load extension cd.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 13, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.cd' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-08T21:38:30.940383] ERR-1770583110-6910
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:38:47.771823] ERR-1770583127-5754
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "daily" is not found
+
+
+[2026-02-08T21:38:55.753061] ERR-1770583135-9151
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "daily" is not found
+
+
+[2026-02-08T21:38:59.396035] ERR-1770583139-2405
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "cd" is not found
+
+
+[2026-02-08T21:39:04.261859] ERR-1770583144-7097
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "balance" is not found
+
+
+[2026-02-08T21:39:12.169089] ERR-1770583152-5627
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "daily" is not found
+
+
+[2026-02-08T21:39:22.336555] ERR-1770583162-7932
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "daily" is not found
+
+
+[2026-02-08T21:41:22.199037] ERR-1770583282-5656
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-08T21:41:22.206762] ERR-1770583282-3463
+Context: load extension cd.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 13, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.cd' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-08T21:41:25.696578] ERR-1770583285-6418
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:41:33.398797] ERR-1770583293-3494
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "daily" is not found
+
+
+[2026-02-08T21:43:24.046169] ERR-1770583404-6670
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-08T21:43:24.055432] ERR-1770583404-1160
+Context: load extension cd.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 13, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.cd' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-08T21:43:27.871873] ERR-1770583407-4113
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:45:52.317567] ERR-1770583552-5647
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-08T21:45:56.071463] ERR-1770583556-3208
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:46:14.506168] ERR-1770583574-2643
+Context: command daily by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 62, in daily
+    neues_guthaben = zahlen_verkleinern(get_inventory(user_id, "MandoCoins"))
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py", line 26, in zahlen_verkleinern
+    if zahl >= value:
+       ^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'dict' and 'int'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: '>=' not supported between instances of 'dict' and 'int'
+
+
+[2026-02-08T21:47:57.536504] ERR-1770583677-9047
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-08T21:48:01.343954] ERR-1770583681-3365
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:48:20.454528] ERR-1770583700-6966
+Context: command daily by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 63, in daily
+    neues_guthaben = zahlen_verkleinern(neues_guthaben)
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py", line 26, in zahlen_verkleinern
+    if zahl >= value:
+       ^^^^^^^^^^^^^
+TypeError: '>=' not supported between instances of 'dict' and 'int'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: '>=' not supported between instances of 'dict' and 'int'
+
+
+[2026-02-08T21:50:44.133568] ERR-1770583844-1656
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-08T21:50:47.608952] ERR-1770583847-1547
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-08T21:51:10.877985] ERR-1770583870-2041
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "gamble" is not found
+
+
+[2026-02-13T16:03:46.928228] ERR-1770995026-1272
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:03:56.397572] ERR-1770995036-3193
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:04:13.751093] ERR-1770995053-4924
+Context: command cd by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\cd.py", line 26, in cd
+    embed =  await choose_Embeds("cd", user=str(ctx.author.id))
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 58, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'cd' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'cd' ist nicht definiert.
+
+
+[2026-02-13T16:06:44.209062] ERR-1770995204-8653
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:06:48.750723] ERR-1770995208-6789
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:09:15.192448] ERR-1770995355-4985
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:09:19.314890] ERR-1770995359-7566
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:09:50.338172] ERR-1770995390-3724
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:09:55.046056] ERR-1770995395-4990
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:10:48.725246] ERR-1770995448-5045
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:10:53.003518] ERR-1770995453-1647
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:10:55.035190] ERR-1770995455-4109
+Context: command help by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\info.py", line 13, in help_command
+    embed =  await choose_Embeds("help_erstellen", user=str(ctx.author.id), arg=arg)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 63, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'help_erstellen' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'help_erstellen' ist nicht definiert.
+
+
+[2026-02-13T16:12:15.341240] ERR-1770995535-2448
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:12:19.419019] ERR-1770995539-3113
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:12:58.808259] ERR-1770995578-3442
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "imposstor" is not found
+
+
+[2026-02-13T16:13:12.359003] ERR-1770995592-3413
+Context: command impostor by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\Impostor.py", line 21, in impostor
+    embed =  await choose_Embeds(
+             ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 67, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'impostor_game' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'impostor_game' ist nicht definiert.
+
+
+[2026-02-13T16:21:12.478420] ERR-1770996072-4291
+Context: command impostor by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\Impostor.py", line 21, in impostor
+    embed =  await choose_Embeds(
+             ^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 67, in choose_Embeds
+ValueError: Embed 'impostor_game' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'impostor_game' ist nicht definiert.
+
+
+[2026-02-13T16:21:24.954593] ERR-1770996084-1853
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:21:29.554108] ERR-1770996089-3680
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:30:10.015888] ERR-1770996610-3499
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:30:14.058149] ERR-1770996614-5362
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:32:41.279643] ERR-1770996761-9776
+Context: command scratchcard by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\scratchcard.py", line 38, in scratchcard
+    embed =  await choose_Embeds("scratchcard_erstellen", user=ctx.author.id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 80, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'scratchcard_erstellen' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'scratchcard_erstellen' ist nicht definiert.
+
+
+[2026-02-13T16:33:23.300272] ERR-1770996803-7983
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "balance" is not found
+
+
+[2026-02-13T16:33:27.830952] ERR-1770996807-5668
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "balance" is not found
+
+
+[2026-02-13T16:36:47.990344] ERR-1770997007-4950
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:36:51.972584] ERR-1770997011-5710
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:37:13.577430] ERR-1770997033-1373
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "balance" is not found
+
+
+[2026-02-13T16:37:16.804869] ERR-1770997036-7421
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "b" is not found
+
+
+[2026-02-13T16:42:39.169300] ERR-1770997359-8446
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:42:43.408004] ERR-1770997363-6512
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:42:46.520146] ERR-1770997366-4791
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "b" is not found
+
+
+[2026-02-13T16:43:09.596018] ERR-1770997389-2997
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "balance" is not found
+
+
+[2026-02-13T16:43:43.018676] ERR-1770997423-1333
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:43:46.919077] ERR-1770997426-2075
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:44:19.486824] ERR-1770997459-5065
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "balance" is not found
+
+
+[2026-02-13T16:48:07.226416] ERR-1770997687-1171
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:48:11.443678] ERR-1770997691-7878
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:51:52.862078] ERR-1770997912-1932
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:51:56.924126] ERR-1770997916-3886
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:52:50.555040] ERR-1770997970-7592
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T16:54:57.898871] ERR-1770998097-3673
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T16:55:02.009404] ERR-1770998102-2763
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:03:23.112474] ERR-1770998603-7966
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T17:03:27.518241] ERR-1770998607-9489
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:05:04.714412] ERR-1770998704-7287
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T17:05:08.958068] ERR-1770998708-7281
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:10:58.323843] ERR-1770999058-3159
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T17:11:03.541204] ERR-1770999063-4893
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:12:31.787179] ERR-1770999151-8064
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T17:12:36.398319] ERR-1770999156-2248
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:13:33.151585] ERR-1770999213-3176
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T17:13:38.252074] ERR-1770999218-6137
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:18:11.829256] ERR-1770999491-1850
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:19:03.154095] ERR-1770999543-3123
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:19:45.443368] ERR-1770999585-1168
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:21:11.502405] ERR-1770999671-5138
+Context: load extension blackjack.py
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 962, in _load_from_module_spec
+    spec.loader.exec_module(lib)  # type: ignore
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^
+  File "<frozen importlib._bootstrap_external>", line 1023, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\blackjack.py", line 6, in <module>
+    from views.blackjack_view import BlackjackView
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\views\blackjack_view.py", line 7, in <module>
+    from funktionen.utils import Zahlen_verkleineren
+ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 24, in load
+    await client.load_extension(ext)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1040, in load_extension
+    await self._load_from_module_spec(spec, name)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 965, in _load_from_module_spec
+    raise errors.ExtensionFailed(key, e) from e
+discord.ext.commands.errors.ExtensionFailed: Extension 'cogs.blackjack' raised an error: ImportError: cannot import name 'Zahlen_verkleineren' from 'funktionen.utils' (c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\utils.py)
+
+
+[2026-02-13T17:21:15.871356] ERR-1770999675-7587
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:29:28.924046] ERR-1771000168-7325
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:30:40.734606] ERR-1771000240-8156
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:32:04.051611] ERR-1771000324-7825
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:32:35.348126] ERR-1771000355-6903
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "ba" is not found
+
+
+[2026-02-13T17:33:01.251405] ERR-1771000381-6202
+Context: command scratchcard by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\scratchcard.py", line 38, in scratchcard
+    embed =  await choose_Embeds("scratchcard_erstellen", user=ctx.author.id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 80, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'scratchcard_erstellen' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'scratchcard_erstellen' ist nicht definiert.
+
+
+[2026-02-13T17:52:13.535565] ERR-1771001533-2084
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:52:15.049747] ERR-1771001535-5399
+Context: command scratchcard by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\scratchcard.py", line 29, in scratchcard
+    embed =  await choose_Embeds(
+             ^^^^^^^^^^^^^^^^^^^^
+        "cooldown_n_ready", user_id=str(ctx.author.id), rest=rest
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 23, in choose_Embeds
+    return await create_embed(**kwargs)
+                 ~~~~~~~~~~~~^^^^^^^^^^
+TypeError: create_embed() got an unexpected keyword argument 'user_id'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: TypeError: create_embed() got an unexpected keyword argument 'user_id'
+
+
+[2026-02-13T17:55:08.056596] ERR-1771001708-2601
+Context: command scratchcard by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\scratchcard.py", line 38, in scratchcard
+    embed =  await choose_Embeds("scratchcard_erstellen", user=ctx.author.id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 80, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'scratchcard_erstellen' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'scratchcard_erstellen' ist nicht definiert.
+
+
+[2026-02-13T17:56:43.273154] ERR-1771001803-9046
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T17:56:59.604084] ERR-1771001819-2706
+Context: command scratchcard by 984039672474914827
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 266, in wrapped
+    ret = await coro(*args, **kwargs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\cogs\scratchcard.py", line 38, in scratchcard
+    embed =  await choose_Embeds("scratchcard_erstellen", user=ctx.author.id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\funktionen\choose_Embeds.py", line 80, in choose_Embeds
+    raise ValueError(f"Embed '{name}' ist nicht definiert.")
+ValueError: Embed 'scratchcard_erstellen' ist nicht definiert.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\bot.py", line 1376, in invoke
+    await ctx.command.invoke(ctx)
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 1064, in invoke
+    await injected(*ctx.args, **ctx.kwargs)  # type: ignore
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\ext\commands\core.py", line 275, in wrapped
+    raise CommandInvokeError(exc) from exc
+discord.ext.commands.errors.CommandInvokeError: Command raised an exception: ValueError: Embed 'scratchcard_erstellen' ist nicht definiert.
+
+
+[2026-02-13T17:58:41.210367] ERR-1771001921-4779
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T18:00:02.429479] ERR-1771002002-7837
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "scratchcrard" is not found
+
+
+[2026-02-13T23:12:09.031396] ERR-1771020729-1088
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-13T23:12:22.594355] ERR-1771020742-9892
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "stockmarket" is not found
+
+
+[2026-02-13T23:20:39.427542] ERR-1771021239-5357
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-14T15:16:57.042998] ERR-1771078617-1999
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-14T15:26:19.716196] ERR-1771079179-8472
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-14T15:30:20.708150] ERR-1771079420-5314
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-14T15:37:11.353121] ERR-1771079831-7444
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-14T15:49:11.703531] ERR-1771080551-7841
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-14T15:56:44.032650] ERR-1771081004-6495
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-14T16:11:07.490260] ERR-1771081867-8185
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-14T16:16:21.866392] ERR-1771082181-5255
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-14T16:21:41.600080] ERR-1771082501-1147
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-16T21:30:44.086943] ERR-1771273844-5415
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-16T21:36:26.027784] ERR-1771274186-5263
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-16T21:39:38.227075] ERR-1771274378-7725
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-16T21:46:14.457490] ERR-1771274774-6112
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-22T23:03:41.421377] ERR-1771797821-9947
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-22T23:15:34.452822] ERR-1771798534-3663
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-24T18:42:32.453215] ERR-1771954952-6474
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-24T18:49:12.092065] ERR-1771955352-7138
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-24T19:46:33.281046] ERR-1771958793-7243
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-24T19:46:35.498318] ERR-1771958795-5800
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "stock#" is not found
+
+
+[2026-02-24T19:48:29.728786] ERR-1771958909-8045
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-24T19:49:30.218861] ERR-1771958970-7097
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-24T19:50:41.444798] ERR-1771959041-4611
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-24T19:52:05.565101] ERR-1771959125-7906
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-24T19:53:47.709383] ERR-1771959227-9350
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-27T22:09:14.647014] ERR-1772226554-7074
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-27T22:10:43.748801] ERR-1772226643-9711
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-27T22:11:52.816688] ERR-1772226712-7094
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-27T22:13:16.769240] ERR-1772226796-7047
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-27T22:16:06.350022] ERR-1772226966-1875
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-27T22:17:00.441124] ERR-1772227020-6650
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-27T22:19:09.100963] ERR-1772227149-9985
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-27T22:19:59.455940] ERR-1772227199-7772
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-27T22:23:45.361500] ERR-1772227425-1923
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-27T22:27:34.089911] ERR-1772227654-3210
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-27T22:30:14.585979] ERR-1772227814-3676
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-27T22:33:00.665894] ERR-1772227980-3858
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-28T23:04:52.459500] ERR-1772316292-9489
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-28T23:14:54.044876] ERR-1772316894-9384
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-28T23:17:02.491320] ERR-1772317022-1304
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-28T23:18:53.263412] ERR-1772317133-3996
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-28T23:39:54.899124] ERR-1772318394-6803
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-02-28T23:42:50.045866] ERR-1772318570-4940
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-01T00:03:06.215914] ERR-1772319786-8459
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-01T00:11:55.851116] ERR-1772320315-2535
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-01T00:14:21.029985] ERR-1772320461-6712
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-01T00:17:17.417591] ERR-1772320637-5480
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-01T00:22:01.911287] ERR-1772320921-2249
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-01T00:33:05.037194] ERR-1772321585-8113
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-01T00:35:15.361759] ERR-1772321715-9699
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-01T00:36:01.722951] ERR-1772321761-8367
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+

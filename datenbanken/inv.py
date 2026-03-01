@@ -50,7 +50,6 @@ class InventoryManager:
     
     
     
-    
     def add_item(self, player_id, item, amount, category=None, tag=None):
         data = self.load_player(player_id)
         if data is None:
@@ -129,5 +128,4 @@ class InventoryManager:
             }
 
         return items
-
 

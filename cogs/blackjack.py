@@ -5,13 +5,17 @@ import uuid
 from datenbanken.aktive_Spiele import aktive_spiele
 from views.blackjack_view import BlackjackView
 from embeds.blackjack_embed import erstelle_start_embed
-from funktionen.utils import Zahlen_verkleineren
+from funktionen.utils import zahlen_verkleinern
 from funktionen.inv_interface import get_inventory, remove_item
 
 
-class Blackjack(commands.Cog):
+class BlackJack(commands.Cog):
     def __init__(self, bot):
         self.bot = bot
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print("Blackjack.py geladen")
 
     @commands.command(name="blackjack", aliases=["Blackjack", "gamble", "Gamble"])
     async def blackjack(self, ctx, einsatz="100"):
@@ -24,7 +28,7 @@ class Blackjack(commands.Cog):
             await ctx.send("❌ The bet must be greater than 0.")
             return
         if user_id in [spiel["user_id"] for spiel in aktive_spiele.values()]:
-            await ctx.send("❌ You already have an active game.", ephemeral=True)
+            await ctx.send("❌ You already have an active game.")
             return
         if get_inventory(user_id, "MandoCoins") < einsatz:
             await ctx.send("❌ You don't have enough coins.")
@@ -66,10 +70,13 @@ class Blackjack(commands.Cog):
 
     @commands.command(name="balance", aliases=["bal", "Bal", "Balance", "b", "B"])
     async def balance(self, ctx):
+        print (f"Checking balance for user {ctx.author.id}")
         stand = get_inventory(ctx.author.id, "MandoCoins")
-        Konto = Zahlen_verkleineren(stand)
+        print(f"Raw balance: {stand}")
+        Konto = zahlen_verkleinern(stand)
+        print(f"Formatted balance: {Konto}")
         await ctx.send(f"💰 Your Balance: **{Konto} MandoCoins**")
 
 
 async def setup(bot):
-    await bot.add_cog(Blackjack(bot))
+    await bot.add_cog(BlackJack(bot))

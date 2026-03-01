@@ -21,9 +21,9 @@ def kombiniere_kartenbilder(urls):
     return kombi.convert("RGB")
 
 
-def Zahlen_verkleineren(Zahl):
+def zahlen_verkleinern(zahl: int) -> str:
     for value, suffix in [(1_000_000_000, "B"), (1_000_000, "M"), (1_000, "K")]:
-        if Zahl >= value:
-            number = Zahl // value
-            return f"{number}{suffix}"
-    return str(Zahl)
+        if zahl >= value:
+            number = zahl / value
+            return f"{number:.1f}{suffix}".rstrip("0").rstrip(".")
+    return str(zahl)

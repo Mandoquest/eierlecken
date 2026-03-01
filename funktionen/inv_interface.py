@@ -12,4 +12,15 @@ def remove_item(player_id, item, amount):
 
 
 def get_inventory(player_id, item=None, category=None, tag=None):
-    return _inv.get_inventory(player_id, item=item, category=category, tag=tag)
+    result = _inv.get_inventory(player_id, item=item, category=category, tag=tag)
+    if item is not None:
+        # If an item was requested, return its integer amount (default 0)
+        if isinstance(result, dict):
+            return result.get("amount", 0)
+        # Fallback: if inventory returned something unexpected, try to coerce
+        try:
+            return int(result)
+        except Exception:
+            return 0
+
+    return result

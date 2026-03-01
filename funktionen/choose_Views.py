@@ -34,11 +34,6 @@ async def choose_Views(name, **kwargs):
         from views.Leaderboard_view import create_leaderboard_buttons
         view = create_leaderboard_buttons
 
-    elif name == "Job_liste":
-        from views.Jobs.jobs import WorkView
-        from datenbanken.job_list import jobs
-        return await call_view(WorkView, jobs)
-
     elif name == "Sprachkanal":
         from views.Sprachkanal import Sprachkanal_Buttons
         view = Sprachkanal_Buttons
@@ -46,6 +41,17 @@ async def choose_Views(name, **kwargs):
     elif name == "Test":
         from views.Test import TestView
         view = TestView
+
+    elif name== "leaderboard_erstellen":
+        from views.Leaderboard_view import create_leaderboard_buttons
+        view = create_leaderboard_buttons
+
+
+
+
+
+
+
 
     elif name == "stockmarket_main":
         from views.stockmarket.stockmarket_Main import stockmarket_main
@@ -75,6 +81,17 @@ async def choose_Views(name, **kwargs):
         from views.stockmarket.buy_stock import StockBuyView
         view = StockBuyView
 
+    elif name == "sell_stock":
+        from views.stockmarket.sell_stock import StockSellView
+        view = StockSellView
+    
+    elif name == "your_portfolio":
+        from views.stockmarket.your_portfolio import YourPortfolio
+        view = YourPortfolio
+
+    elif name == "Fincancial_Statistics":
+        from views.stockmarket.Finacial_Statistics import FinancialStatisticsView
+        view = FinancialStatisticsView
 
     else:
         raise ValueError(f"View '{name}' nicht gefunden.")
