@@ -43,18 +43,22 @@ class Sprachkanal(commands.Cog):
         guild = member.guild
         channel_id = get_channel(guild.id)
 
+        # ──────────────── JOIN Trigger ────────────────
         if before.channel is None and after.channel is not None:
             if after.channel.id == channel_id:
                 category = after.channel.category
                 created_channel = await guild.create_voice_channel(
-                    name=f"{member.name}'s Room", category=category
+                    name=f"{member.name}'s Room",
+                    category=category
                 )
                 self.temp_channels[str(created_channel.id)] = member.id
                 self.save_channels()
                 await member.move_to(created_channel)
 
-        elif before.channel is not None and after.channel is None:
+        # ──────────────── LEAVE / MOVE Trigger ────────────────
+        if before.channel is not None:
             channel = before.channel
+
             if str(channel.id) in self.temp_channels:
                 if len(channel.members) == 0:
                     await channel.delete()
