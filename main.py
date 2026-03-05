@@ -131,6 +131,7 @@ async def on_command_error(ctx, error):
         print("Fehler in on_command_error handler:", e)
 
 
+
 asyncio.run(main())
 
 

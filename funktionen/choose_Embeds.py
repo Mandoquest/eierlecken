@@ -18,6 +18,9 @@ async def choose_Embeds(name: str, **kwargs):
         embed = await call_embed(create_embed)
         return embed
 
+    elif name == "Sprachkanal":
+        from embeds.Sprachkanal import Sprachkanal
+        return await call_embed(Sprachkanal, **kwargs)
 
     elif name == "scratchcard_erstellen":
         from embeds.scratchcard import scratchcard_erstellen

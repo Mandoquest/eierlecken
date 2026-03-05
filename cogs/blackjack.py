@@ -63,10 +63,18 @@ class BlackJack(commands.Cog):
             "aktion_laeuft": False,
         }
 
-        embed = await erstelle_start_embed(
-            ctx.author, spiel_id, einsatz, player_cards
-        )
-        await ctx.send(embed=embed, view=view)
+        try:
+            embed, file = await erstelle_start_embed(
+                ctx.author, spiel_id, einsatz, player_cards
+            )
+            await ctx.send(embed=embed, file=file, view=view)
+        except Exception as e:
+            print(f"Error sending blackjack embed: {e}")
+            await ctx.send(f"❌ Error displaying game: {str(e)}")
+            # Refund the bet since the game failed
+            from funktionen.inv_interface import add_item
+            add_item(user_id, "MandoCoins", einsatz)
+            del aktive_spiele[spiel_id]
 
     @commands.command(name="balance", aliases=["bal", "Bal", "Balance", "b", "B"])
     async def balance(self, ctx):

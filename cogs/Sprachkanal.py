@@ -1,3 +1,5 @@
+from enum import member
+
 import discord
 import os
 import json
@@ -14,6 +16,11 @@ class Sprachkanal(commands.Cog):
         self.file = "datenbanken/temp_channels.json"
         self.temp_channels = self.load_channels()
 
+
+    @commands.Cog.listener()
+    async def on_ready(self):
+        print("Sprachkanal.py geladen")
+
     def load_channels(self):
         if os.path.exists(self.file):
             with open(self.file, "r") as f:
@@ -26,8 +33,12 @@ class Sprachkanal(commands.Cog):
 
     @commands.command(name="Voicechannel", aliases=["vc", "voicechannel"])
     async def sprachkanal(self, ctx):
+        
+        print(f"User {ctx.author} ({ctx.author.id}) used the Voicechannel command in guild {ctx.guild} ({ctx.guild.id})")
         if ctx.author.guild_permissions.administrator:
+            print("User has administrator permissions, sending embed and view")
             embed =  await choose_Embeds("Sprachkanal", Guild=ctx.guild)
+            print("Embed created, creating view")
             view = await choose_Views("Sprachkanal", Guild=ctx.guild)
             await ctx.send(embed=embed, view=view)
         else:
@@ -40,30 +51,82 @@ class Sprachkanal(commands.Cog):
 
     @commands.Cog.listener()
     async def on_voice_state_update(self, member, before, after):
+        print("--------------------------------------------------------------------------------")
+        print(f"Voice state update detected for user {member} ({member.id}) in guild {member.guild} ({member.guild.id})")
         guild = member.guild
-        channel_id = get_channel(guild.id)
+        trigger_channel_id = get_channel(guild.id)
 
-        # ──────────────── JOIN Trigger ────────────────
-        if before.channel is None and after.channel is not None:
-            if after.channel.id == channel_id:
-                category = after.channel.category
+        # ──────────────── JOIN / MOVE IN TRIGGER ────────────────
+        print(f"Trigger channel ID: {trigger_channel_id}")
+        if after.channel and after.channel.id == trigger_channel_id:
+            # Verhindert doppeltes Erstellen
+            for channel_id, owner_id in self.temp_channels.items():
+                if owner_id == member.id:
+                    channel = guild.get_channel(int(channel_id))
+                    if channel:
+                        await member.move_to(channel)
+                    return
+
+            category = after.channel.category
+
+            try:
                 created_channel = await guild.create_voice_channel(
                     name=f"{member.name}'s Room",
-                    category=category
+                    category=category,
+                    reason="Join-to-Create Voice Channel"
                 )
+
+                # Owner speichern
                 self.temp_channels[str(created_channel.id)] = member.id
                 self.save_channels()
+
+                # Rechte setzen
+                await created_channel.set_permissions(
+                    member,
+                    manage_channels=True,
+                    mute_members=True,
+                    move_members=True,
+                    connect=True
+                )
+
                 await member.move_to(created_channel)
 
-        # ──────────────── LEAVE / MOVE Trigger ────────────────
-        if before.channel is not None:
-            channel = before.channel
+            except Exception as e:
+                print(f"[Voice-System] Fehler beim Erstellen: {e}")
 
-            if str(channel.id) in self.temp_channels:
+        # ──────────────── LEAVE / MOVE OUT ────────────────
+        print(f"Checking if user left a temp channel...")
+        if before.channel:
+            channel = before.channel
+            channel_id = str(channel.id)
+
+            if channel_id not in self.temp_channels:
+                return
+
+            try:
+                # Channel leer → löschen
                 if len(channel.members) == 0:
-                    await channel.delete()
-                    del self.temp_channels[str(channel.id)]
+                    await channel.delete(reason="Temp Voice leer")
+                    del self.temp_channels[channel_id]
                     self.save_channels()
+                    return
+
+                # Owner weg → neuen Owner bestimmen
+                owner_id = self.temp_channels[channel_id]
+                if member.id == owner_id:
+                    new_owner = channel.members[0]
+                    self.temp_channels[channel_id] = new_owner.id
+                    self.save_channels()
+
+                    await channel.set_permissions(
+                        new_owner,
+                        manage_channels=True,
+                        mute_members=True,
+                        move_members=True
+                    )
+
+            except Exception as e:
+                print(f"[Voice-System] Fehler beim Löschen/Owner-Wechsel: {e}")
 
     @commands.command(name="rename")
     async def rename(self, ctx, *, new_name: str):

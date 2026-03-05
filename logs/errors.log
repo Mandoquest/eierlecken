@@ -2837,3 +2837,177 @@ Traceback (most recent call last):
 discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
 
 
+[2026-03-02T17:44:53.208963] ERR-1772469893-8992
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-02T17:54:04.317521] ERR-1772470444-2382
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-02T17:55:58.424760] ERR-1772470558-2825
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "sprachkanal" is not found
+
+
+[2026-03-02T17:56:08.226660] ERR-1772470568-7640
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "sprachkanal" is not found
+
+
+[2026-03-02T17:57:08.141590] ERR-1772470628-6363
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-02T17:57:14.802552] ERR-1772470634-5126
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "sprachkanal" is not found
+
+
+[2026-03-02T17:57:23.160957] ERR-1772470643-3382
+Context: command None by 984039672474914827
+discord.ext.commands.errors.CommandNotFound: Command "sprachkanal" is not found
+
+
+[2026-03-02T17:57:53.358929] ERR-1772470673-5545
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-02T18:00:09.970124] ERR-1772470809-4935
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-02T18:05:10.412440] ERR-1772471110-7029
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-02T18:07:28.046973] ERR-1772471248-4335
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-02T18:09:18.562841] ERR-1772471358-2543
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-05T19:41:03.994957] ERR-1772736063-3800
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-05T19:44:40.575359] ERR-1772736280-3418
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+
+[2026-03-05T19:46:04.442343] ERR-1772736364-1856
+Context: on_ready fetch channel
+Traceback (most recent call last):
+  File "c:\Users\Norwin\iCloudDrive\Mandoobot\main.py", line 36, in on_ready
+    channel = await client.fetch_channel(CHANNEL_ID)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\client.py", line 2665, in fetch_channel
+    data = await self.http.get_channel(channel_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Norwin\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\LocalCache\local-packages\Python313\site-packages\discord\http.py", line 769, in request
+    raise NotFound(response, data)
+discord.errors.NotFound: 404 Not Found (error code: 10003): Unknown Channel
+
+

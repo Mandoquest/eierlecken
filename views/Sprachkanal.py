@@ -9,6 +9,14 @@ def Sprachkanal_Buttons(**kwargs):
     guild: discord.Guild = kwargs.get("Guild")
     channel_id = get_channel(guild.id)
 
+    # Validate that the stored channel actually exists
+    if channel_id is not None:
+        channel = guild.get_channel(channel_id)
+        if channel is None:
+            # Channel no longer exists, clear the database
+            set_channel(guild.id, None)
+            channel_id = None
+
     if channel_id is None:
 
         class SprachkanalView(View):
