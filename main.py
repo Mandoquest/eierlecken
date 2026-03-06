@@ -122,20 +122,7 @@ async def main():
         await client.start(token)
 
 
-@client.event
-async def on_command_error(ctx, error):
-    try:
-        cmd_name = ctx.command.name if ctx.command else None
-        await report_exception(client, error, context=f"command {cmd_name} by {ctx.author.id}", admin_channel_id=ERROR_CHANNEL_ID, admin_user_id=ADMIN_USER_ID)
-    except Exception as e:
-        print("Fehler in on_command_error handler:", e)
-
-
 
 asyncio.run(main())
 
 
-##################################
-##          Sellbutton          ##
-##         Back Button          ##
-##################################
