@@ -1,9 +1,9 @@
-import asyncio
+import inspect
 
 async def choose_Views(name, **kwargs):
     async def call_view(cls, **kw):
         # cls ist die Klasse der View, erzeugt hier die Instanz
-        if asyncio.iscoroutinefunction(cls):
+        if inspect.iscoroutinefunction(cls):
             return await cls(**kw)
         else:
             return cls(**kw)
